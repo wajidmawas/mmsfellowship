@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|e:\\personal\\khalid bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|e:\\personal\\khalid bhai\\mms_website\\mmsfellowship\\mmsfellowship\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Site.css",
+              "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Content\\Site.css",
+              "RelativeDocumentMoniker": "mmsfellowship\\Content\\Site.css",
+              "ToolTip": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Content\\Site.css",
+              "RelativeToolTip": "mmsfellowship\\Content\\Site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-14T10:41:32.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "registration.cshtml",
+              "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Home\\registration.cshtml",
+              "RelativeDocumentMoniker": "mmsfellowship\\Views\\Home\\registration.cshtml",
+              "ToolTip": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Home\\registration.cshtml",
+              "RelativeToolTip": "mmsfellowship\\Views\\Home\\registration.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:40:54.189Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
