@@ -4,7 +4,7 @@
     ViewBag.Title = "CHAMPIONING YOUNG LEADERS FOR  A BETTER TOMORROW";
 }
 <script src="~/Scripts/ngStorage.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style type="text/css">
    
 
@@ -67,6 +67,44 @@
     .form-control, .form-select {
         background-color: #e8eaf1;
     }
+
+
+    /* The snackbar - position it at the bottom and in the middle of the screen */
+    #snackbar {
+        visibility: hidden; /* Hidden by default. Visible on click */
+        min-width: 250px; /* Set a default minimum width */
+        margin-left: -125px; /* Divide value of min-width by 2 */
+        background-color: #1caaec; /* Black background color */
+        color: #fff; /* White text color */
+        text-align: center; /* Centered text */
+        border-radius: 2px; /* Rounded borders */
+        padding: 16px; /* Padding */
+        position: fixed; /* Sit on top of the screen */
+        z-index: 9999; /* Add a z-index if needed */
+        left: 50%; /* Center the snackbar */
+        bottom: 30px; /* 30px from the bottom */
+    }
+
+        /* Show the snackbar when clicking on a button (class added with JavaScript) */
+        #snackbar.show {
+            visibility: visible; /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+    .msg {
+        word-wrap: break-word;
+        min-width: 50px;
+        max-width: 90%;
+        /* padding: 10px; */
+        padding: 12px 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        background: #1caaec;
+        color: white;
+    }
 </style>
 <div ng-app="myApp" ng-controller="mmsfellowshipController">
     <section class="position-relative">
@@ -94,10 +132,20 @@
                 <div class="col-md-6 mx-lg-auto">
                     <div class="loading" style="display:none">
                         <img src="@Url.Content("~/Content/img/spinner.gif")" class="spinner" />
-                    </div> 
+                    </div>
 
-                     
-                    <h3 class="mb-3 mt-5 title font-normal"><b>Register</b></h3>
+                    <div class="row col-md-12 msg" id="content" style="display:none">
+                        <p style="color:white">
+                            <br /> 
+                            <b>
+                                Thank You for Sharing Your Voice!
+                                <br />
+                            </b>
+                            <br />
+                        </p>
+
+                    </div>
+                    <h3 class="mb-3 mt-5 title font-normal divRegister"><b>Register</b></h3>
                     <div class="row" id="divForm">
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
@@ -129,8 +177,6 @@
                                         <option value="">Select Gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
-                                        <option value="Transgender">Transgender</option>
-                                        <option value="Prefer not to say">Prefer not to say</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
@@ -206,11 +252,11 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="custom-file">
-                                        <input type="file" id="txtFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
-                                        <label for="txtFile" class="custom-file-label">Choose File</label>
+                                        <input type="file" id="txtFile_phot" accept="image/*" ng-model="Image">
+                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label">Choose File</label>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
 
                         <div class="col-md-12 bdr-btm_yellow">
@@ -222,8 +268,8 @@
                                     <b>“What is one change you are most determined to bring to Indian politics, and why?”</b>*
                                 </label>
                                 <div class="custom-file">
-                                    <input type="file" id="txtFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
-                                    <label for="txtFile" class="custom-file-label">Choose File</label>
+                                    <input type="file" id="myFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
+                                    <label for="txtFile" id="lblFile" class="custom-file-label">Choose File</label>
                                 </div>
 
                             </div>

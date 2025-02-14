@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Manmohan Singh Fellows Program</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" /> 
-    <link rel="stylesheet" href="~/Content/Site.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" /> 
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/favicon.png"> 
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://profcongress.in/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="All India Professionals' Congress">
+    <meta property="og:description" content="All India Professionals' Congress | Indian National Congress">
+    <meta property="og:image" content="https://join.profcongress.in/Content/img/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="join.profcongress.in">
+    <meta property="twitter:url" content="https://profcongress.in/">
+    <meta name="twitter:title" content="All India Professionals' Congress">
+    <meta name="twitter:description" content="All India Professionals' Congress | Indian National Congress">
+    <meta name="twitter:image" content="https://join.profcongress.in/Content/img/logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="All India Professionals' Congress | Indian National Congress" />
+
 </head>
 <body>
 
@@ -52,7 +74,7 @@
     </div>
 
     @RenderBody()
-
+    <div id="snackbar"></div>
     <footer class="bg_4">
         <div class="container">
             <div class="row">
@@ -97,15 +119,15 @@
     <script type="text/javascript" src="~/Scripts/angular.js"></script>
     <script type="text/javascript" src="~/Scripts/Upload.js"></script>
     <script>
-        
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= 330) {
-                    $('.navbar').addClass('fixed');
-                }
-                else {
-                    $('.navbar').removeClass('fixed');
-                }
-            }); 
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 330) {
+                $('.navbar').addClass('fixed');
+            }
+            else {
+                $('.navbar').removeClass('fixed');
+            }
+        });
     </script>
 </body>
 </html>
