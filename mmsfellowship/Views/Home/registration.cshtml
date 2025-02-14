@@ -6,7 +6,7 @@
 <script src="~/Scripts/ngStorage.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style type="text/css">
-   
+
 
     /* CSSTerm.com Simple CSS menu */
     body {
@@ -96,7 +96,7 @@
     .msg {
         word-wrap: break-word;
         min-width: 50px;
-        max-width: 90%; 
+        max-width: 90%;
         padding: 12px 20px;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
@@ -105,7 +105,7 @@
         color: white;
         position: absolute;
         left: 0;
-        right: 0; 
+        right: 0;
         bottom: 0;
         height: 100px;
         width: 22%;
@@ -116,8 +116,8 @@
         z-index: 9999;
         background: white;
         width: 100%;
-        height: 100%; 
-        left: 0; 
+        height: 100%;
+        left: 0;
         right: 0;
         margin: auto;
         text-align: center;
@@ -128,6 +128,15 @@
         .loading img {
             width: 150px;
         }
+    .main_title img{
+        width:300px
+    }
+
+    @@media screen and (max-width: 767px) {
+        .main_title img {
+            width: 150px;
+        }
+    }
 </style>
 <div ng-app="myApp" ng-controller="mmsfellowshipController">
     <section class="position-relative">
@@ -135,6 +144,7 @@
         <img src="~/Content/images/main_slider1.jpg" class="w-100 Mainslider" />
         <div class="container">
             <div class="main_title"> 
+                <a href="/"><img src="~/Content/images/main_logo_white.png" /></a>
                 <h1 class="text-white">
                     CHAMPIONING<br />
                     YOUNG LEADERS<br />
