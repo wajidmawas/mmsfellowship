@@ -358,4 +358,7 @@ p{
         text-align:center;
         margin-top:20px
     }
+    .navbar-brand img{
+        width:220px
+    }
     }
