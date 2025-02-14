@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Manmohan Singh Fellows Program</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" /> 
+    <link rel="stylesheet" href="~/Content/Site.css"/>
+</head>
+<body>
+
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="~/Content/images/main_logo.png" alt="Logo" class="size-36">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto" style="font-size: 14px;">
+                        <li class="nav-item additional-option d-lg-block">
+                            <a class="nav-link" href="#Home">Home</a>
+                        </li>
+                        <li class="nav-item additional-option d-lg-block">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item additional-option d-lg-block">
+                            <a class="nav-link" href="#why">Why Apply</a>
+                        </li>
+                        <li class="nav-item additional-option d-lg-block">
+                            <a class="nav-link" href="#process">Selection Process</a>
+                        </li>
+                        <li class="nav-item additional-option d-lg-block">
+                            <a class="nav-link" href="#Timeline">Timeline</a>
+                        </li>
+                        <li class="nav-item additional-option d-lg-block">
+                            <a class="nav-link" href="@Url.Action("registration","home")">Apply Now</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+        </nav>
+    </div>
+
+    @RenderBody()
+
+    <footer class="bg_4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="ftitle text-white">
+                        QUICK LINKS
+                    </h2>
+                    <ul class="bottom_nav">
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#process">Fellowship Process</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 sns">
+                    <a href="mailto:mmsfellows@profcongress.com" class="small_fnt text-white">mmsfellows@profcongress.com</a>
+                    <div class="sns_icons">
+                        <a href="">
+                            <img src="~/Content/images/Facebook.png" />
+                        </a>
+                        <a href="">
+                            <img src="~/Content/images/Instagram.png" />
+                        </a>
+                        <a href="">
+                            <img src="~/Content/images/Linkdin.png" />
+                        </a>
+                        <a href="">
+                            <img src="~/Content/images/X.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/angular.js"></script>
+    <script type="text/javascript" src="~/Scripts/Upload.js"></script>
+    <script>
+        
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 330) {
+                    $('.navbar').addClass('fixed');
+                }
+                else {
+                    $('.navbar').removeClass('fixed');
+                }
+            }); 
+    </script>
+</body>
+</html>

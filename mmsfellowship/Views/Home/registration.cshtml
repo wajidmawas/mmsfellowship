@@ -1,0 +1,247 @@
+﻿
+@{
+
+    ViewBag.Title = "CHAMPIONING YOUNG LEADERS FOR  A BETTER TOMORROW";
+}
+<script src="~/Scripts/ngStorage.js"></script>
+
+<style type="text/css">
+   
+
+    /* CSSTerm.com Simple CSS menu */
+    body {
+        background: #fff !important;
+        overflow-y: auto;
+    }
+
+    .inner_div1 {
+        height: auto;
+    }
+    #navbar, footer{
+        display:none;
+    }
+    label{
+        font-size:14px;
+        font-weight:900;
+    }
+    .bdr_yellor {
+        border-top: 1px solid #ffcd00;
+        border-bottom: 1px solid #ffcd00;
+    }
+    .bdr-btm_yellow {
+        border-bottom: 1px solid #ffcd00;
+    }
+    .btn{
+        border-radius:10px;
+    }
+    .custom-file {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        padding:10px 0
+    }
+
+        .custom-file input[type="file"] {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            opacity: 0; /* Hide default input */
+            cursor: pointer;
+        }
+
+    .custom-file-label {
+        background: #e9ecf3; /* Change background color */
+        color: #9e9e9e;
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+        .custom-file-label:hover {
+            background: #0056b3; /* Darker on hover */
+        }
+</style>
+<div ng-app="myApp" ng-controller="mmsfellowshipController">
+    <section class="position-relative">
+
+        <img src="~/Content/images/main_slider1.jpg" class="w-100 Mainslider" />
+        <div class="container">
+            <div class="main_title"> 
+                <h1 class="text-white">
+                    CHAMPIONING<br />
+                    YOUNG LEADERS<br />
+                    FOR A BETTER<br />
+                    TOMORROW
+                </h1>
+               
+            </div>
+        </div>
+
+    </section>
+   
+    <div class="container">
+        <div class="main_left_panel">
+
+            <div class="inner_div1 row mt-5"> 
+                 
+                <div class="col-md-6 mx-lg-auto">
+                    <div class="loading" style="display:none">
+                        <img src="@Url.Content("~/Content/img/spinner.gif")" class="spinner" />
+                    </div> 
+
+                     
+                    <h3 class="mb-3 mt-5 title font-normal"><b>Register</b></h3>
+                    <div class="row" id="divForm">
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">Full Name *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" id="txtName" ng-model="Name" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">DOB</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="date" id="txtDOB" ng-model="DOB" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">Gender *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-select" id="drpGender" ng-model="Gender">
+                                        <option value="">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Transgender">Transgender</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">Mobile No *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" id="txtMobileNo" ng-model="MobileNo" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">Email *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" id="txtEmail" ng-model="EmailAddress" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">State *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-select" id="drpStateList" ng-model="StateID" ng-change="FilterDistrict()">
+                                        <option value="">Select State</option>
+                                        <option value="{{x.STATEID}}" ng-repeat="x in StateList">{{x.STATENAME}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">District *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-select" id="drpStateList" ng-model="District">
+                                        <option value="">Select District</option>
+                                        <option value="{{x.DistrictID}}" ng-repeat="x in DistrictList">{{x.DistrictName}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">Qualification *</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-select" id="drpStateList" ng-model="Qualification">
+                                        <option value="">Select Qualification </option>
+                                        <option value="Graduate">Graduate</option>
+                                        <option value="Post Graduate">Post Graduate</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 bdr_yellor mb-3 mt-3">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-lg-4">
+                                    <label for="inputPassword6" class="col-form-label">  Upload Aadhar card *</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="custom-file">
+                                        <input type="file" id="txtFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
+                                        <label for="txtFile" class="custom-file-label">Choose File</label>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-md-12 bdr-btm_yellow">
+                            <div class="form-group d-flex flex-column input">
+                                <label>
+                                    Submit a video (not more than 2 mins) answering the following question,
+                                    You may record the answer in the language of your choice
+                                    <br /><br />
+                                    <b>“What is one change you are most determined to bring to Indian politics, and why?”</b>*
+                                </label>
+                                <div class="custom-file">
+                                    <input type="file" id="txtFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
+                                    <label for="txtFile" class="custom-file-label">Choose File</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="margin-top:5%;margin-bottom:5%">
+                            <button class="btn btn-warning w-100 text-white" id="btnSubmit" ng-click="SaveRecord()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript"> 
+    var pageId = '@ViewBag.pageId'
+    var membercode = ''
+    $(document).ready(function () {
+        $(".left_main_panel").hide();
+    })
+</script>
