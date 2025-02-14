@@ -97,7 +97,7 @@
         word-wrap: break-word;
         min-width: 50px;
         max-width: 90%;
-        padding: 12px 20px;
+        padding: 12px 10px;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
@@ -107,8 +107,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 100px;
-        width: 22%;
+        top:0;
+        max-height: 99vh;
+        overflow-y: auto;
+        width: 75%;
         margin: auto;
     }
     .loading {
@@ -131,10 +133,22 @@
     .main_title img{
         width:300px
     }
-
+    .overlay{
+        width:100%;
+        height:100vh;
+        background:rgba(0,0,0,0.6);
+        position:fixed;
+        left:0;
+        top:0;
+        z-index:99;
+    }
     @@media screen and (max-width: 767px) {
         .main_title img {
             width: 150px;
+        }
+        .msg{
+            width:90%;
+            
         }
     }
 </style>
@@ -163,16 +177,32 @@
             <div class="inner_div1 row mt-5"> 
                  
                 <div class="col-md-6 mx-lg-auto"> 
-                    <div class="row col-md-12 msg" id="content" style="display:none">
-                        <p style="color:white">
-                            <br /> 
-                            <b>
-                                Thank You for Sharing Your Voice!
-                                <br />
-                            </b>
-                            <br />
-                        </p>
+                    <div class="overlay" id="content" style="display:none">
+                        <div class="row col-md-12 msg">
+                            <p style="color:white">
+                                Thank you for your interest in the Dr. Manmohan Singh Fellows Program by the All India Professionals’ Congress. We are thrilled to see your passion for public service and leadership, and we appreciate your commitment to shaping a brighter future for India.
+                                <br /><br />
+                                <b>Next Steps</b><br /><br />
 
+                                Your application has been received successfully. As part of the selection process, here’s what to expect:<br /><br />
+
+                                1. Application Review – Our team will assess your submission based on the eligibility criteria and your demonstrated passion for societal change.<br />
+
+                                2. Video Submission – If you haven’t already, please record and submit a 3-minute video introducing yourself and your vision for India’s future and email to <a href="mailto:mmsfellows@profcongress.in" class="text-white">mmsfellows@profcongress.in</a><br />
+
+                                3. Personal Interview – Shortlisted candidates will be invited for an interaction with our selection committee to discuss their ideas and aspirations further.<br /><br />
+
+                                We appreciate your enthusiasm and the time you have taken to apply. Should you have any questions or require any assistance, feel free to reach out at <a href="mailto:mmsfellows@profcongress.in" class="text-white">mmsfellows@profcongress.in</a><br /><br />
+
+                                Stay tuned for updates on your application status!
+                                <br /><br />
+                                Best regards,<br />
+                                Dr. Manmohan Singh Fellows Program Team<br />
+                                All India Professionals’ Congress
+                            </p>
+
+                            <button class="btn btn-warning mt-3 mb-3 text-white" ng-click="close()" style="height:45px">Close</button>
+                        </div>
                     </div>
                     <h3 class="mb-3 mt-5 title font-normal divRegister"><b>Register</b></h3>
                     <div class="row" id="divForm">

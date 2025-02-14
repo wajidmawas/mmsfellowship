@@ -187,10 +187,8 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
                     }, 'slow');
                     if (result.Response === 200) {
                         $("#divForm,.divRegister").hide();
-                        $("#content").show();
-                        setTimeout(function () {
-                            window.location.reload(true);
-                        }, 15000)
+                        $("#content").show(); 
+                       
 
                     }
                     else {
@@ -203,7 +201,10 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             });
         }
     }
-
+    $scope.close = function () {
+        $("#content").hide;
+        window.location.reload(true);
+    }
     $scope.CheckLogin = function () {
         if ($("#btnModalConfirm").html() == "Validate OTP" && $scope.OTPSend != '') {
             if ($scope.OTPSend == $scope._lOTP) {

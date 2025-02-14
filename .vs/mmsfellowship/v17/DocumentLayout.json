@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\scripts\\upload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\scripts\\upload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|e:\\personal\\khalid bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -11,24 +19,16 @@
       "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|e:\\personal\\khalid bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|e:\\personal\\khalid bhai\\mms_website\\mmsfellowship\\mmsfellowship\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\views\\home\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|e:\\personal\\khalid bhai\\mms_website\\mmsfellowship\\mmsfellowship\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\scripts\\upload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{92073068-207A-4E1E-8A1B-7F6C562584F2}|mmsfellowship\\mmsfellowship.csproj|solutionrelative:mmsfellowship\\scripts\\upload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "mmsfellowship\\Controllers\\HomeController.cs",
@@ -114,12 +114,11 @@
               "RelativeToolTip": "mmsfellowship\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAIcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T15:46:40.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T15:46:40.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "mmsfellowship\\Views\\Home\\Index.cshtml",
@@ -127,25 +126,24 @@
               "RelativeToolTip": "mmsfellowship\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAP8AAAAAAAAAAAAAACMBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-14T15:44:08.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T15:44:08.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "mmsfellowship\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "mmsfellowship\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-14T12:26:03.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Web.config",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Web.config",
               "RelativeDocumentMoniker": "mmsfellowship\\Web.config",
@@ -158,19 +156,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Upload.js",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Scripts\\Upload.js",
               "RelativeDocumentMoniker": "mmsfellowship\\Scripts\\Upload.js",
               "ToolTip": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Scripts\\Upload.js",
               "RelativeToolTip": "mmsfellowship\\Scripts\\Upload.js",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAswMsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-14T12:23:51.654Z"
+              "WhenOpened": "2025-02-14T12:23:51.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Site.css",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Content\\Site.css",
               "RelativeDocumentMoniker": "mmsfellowship\\Content\\Site.css",
@@ -178,18 +177,17 @@
               "RelativeToolTip": "mmsfellowship\\Content\\Site.css",
               "ViewState": "AgIAAGQBAAAAAAAAAAD4v4ABAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-14T10:41:32.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T10:41:32.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "registration.cshtml",
               "DocumentMoniker": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Home\\registration.cshtml",
               "RelativeDocumentMoniker": "mmsfellowship\\Views\\Home\\registration.cshtml",
               "ToolTip": "E:\\Personal\\Khalid Bhai\\mms_website\\mmsfellowship\\mmsfellowship\\Views\\Home\\registration.cshtml",
               "RelativeToolTip": "mmsfellowship\\Views\\Home\\registration.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAIwMMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-14T10:40:54.189Z",
               "EditorCaption": ""
