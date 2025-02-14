@@ -71,8 +71,8 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
                 return false;
             } 
         }
-        if (file[0].size > 2097152) { //2097152
-            alert('Please select file size less than 2 MB');
+        if (file[0].size > 10097152) { //2097152
+            alert('Please select file size less than 10 MB');
             return false;
         }  
         var file = $('#myFile')[0].files[0].name;
