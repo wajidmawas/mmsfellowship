@@ -162,7 +162,7 @@ app.controller("report4Controller", ["$scope", "$http", "$compile", function ($s
     $scope.ShowDetails = function (item, flg) {
         $("#divOccupation").hide();
         $("#divOccupationDetails").show();
-        $scope.GetMasters(75, 0, item.occupation, "");
+        $scope.GetMasters(100, 0, item.StateID, "");
 
     }
     $scope.ReasonText = "";
@@ -173,11 +173,11 @@ app.controller("report4Controller", ["$scope", "$http", "$compile", function ($s
     $scope.ShowLocationDetails = function (item, flg) {
         $("#divLocation").hide();
         $("#divLocationDetails").show();
-        $scope.GetMasters(75, 0, item.occupation, "");
+        $scope.GetMasters(100, 0, item.occupation, "");
 
     }
     $scope.SearchData = function () {
-        $scope.GetMasters(74, 0, $scope.searchkeyword, "");
+        $scope.GetMasters(99, 0, $scope.searchkeyword, "");
 
     }
     $scope.Back1 = function (flg) {
@@ -211,14 +211,14 @@ app.controller("report4Controller", ["$scope", "$http", "$compile", function ($s
             if (TypeId == 98) {
                 $scope.ByState = response.data.objresult.Table;
                 $scope.Summary = response.data.objresult.Table1;
-                $("#menu2").addClass("in active")
+                $("#home").addClass("in active")
             }
-            if (TypeId == 75) {
-                $scope.OccupationDetails = response.data.objresult.Table;
-            }
-            if (TypeId == 74) {
+            if (TypeId == 99) {
                 $scope.Summary = response.data.objresult.Table;
-                $("#menu2").addClass("in active")
+            }
+            if (TypeId == 100) {
+                $scope.OccupationDetails = response.data.objresult.Table;
+                $("#home").addClass("in active")
             }
 
             if (TypeId == 38) {
