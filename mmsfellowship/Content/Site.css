@@ -54,6 +54,10 @@ p{
     color: #000
 }
 
+.small_fnt1 {
+    font-size: 14px;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
     margin: 0 15px;
     color: #414042 !important;
@@ -313,15 +317,19 @@ p{
     }
     .main_title h1 {
         font-size: 16px;
+        margin: 2% 0;
     }
     .main_title{
         padding:3% 0;
+    }
+    .btn_main:hover { 
+        font-size: 10px !important;
     }
     .abt_div{
         margin:10px 0
     }
     .top_img img, .top_img1 img {
-        width: 32px;
+        width: 48px;
     }
     .sub_title {
         font-size: 14px;
@@ -330,7 +338,7 @@ p{
         margin: 20px 0 10px;
     }
         .top_img::after{
-            left:32px
+            left:45px
         }
     .bg {
         padding: 5% 0 20% !important;
@@ -360,5 +368,25 @@ p{
     }
     .navbar-brand img{
         width:220px
+    }
+    .lastTI::after {
+        background-color: #ffcd00 !important;
+    }
+    .small_fnt1{
+        font-size:13px
+    }
+    .sec_para {
+        width: 100%
+    }
+    .bg_3 {
+        padding: 5% 0 35% !important;
+    }
+    .journey_div::after {
+        bottom: -35px;
+        left: 24%;
+        height: 35px;
+    }
+    .date{
+        width:180px
     }
     }
