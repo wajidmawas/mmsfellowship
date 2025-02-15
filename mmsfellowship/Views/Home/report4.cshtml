@@ -1,0 +1,602 @@
+﻿
+@{
+    ViewBag.Title = "CHAMPIONING YOUNG LEADERS FOR  A BETTER TOMORROW";
+}
+<script src="~/Scripts/ngStorage.js"></script>
+<style type="text/css">
+    .tab-content {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    /* CSSTerm.com Simple CSS menu */
+    body {
+        background: #fff !important;
+        overflow-y: auto;
+    }
+
+    .inner_div1 {
+        height: auto;
+    }
+
+    #navbar, footer {
+        display: none;
+    }
+    /* CSSTerm.com Simple CSS menu */
+
+    /*
+        #txtendDate:before {
+
+            content: attr(data-date);
+        }
+
+        #txtendDate::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+            display: none;
+        }
+
+    #txtendDate::-webkit-calendar-picker-indicator {
+        right: 0;
+        color: black;
+        opacity: 1;
+    }*/
+    .main_div {
+        width: 95% !important;
+    }
+
+    .header {
+        display: none !important;
+        width: 100%;
+    }
+
+    .header_inner {
+        display: flex !important;
+        width: 100%;
+    }
+
+    #login_btn, #menu {
+        display: none !important;
+    }
+
+    .dflex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .w-100 {
+        width: 100% !important;
+    }
+
+    .dashed_bdr {
+        border: 1px dashed #518EF8;
+    }
+
+    .bg-success {
+        color: #fff !important;
+    }
+
+    .mt-10 {
+        margin-top: 10px;
+    }
+
+    .page1, .page2, .page3, .page5 {
+        padding: 20px;
+        position: relative;
+        height: 70vh;
+    }
+
+        .page1 h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .page1 p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+    .signature {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+        .signature h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .signature p {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+        }
+
+    .page1 img {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+    }
+
+    .login_div {
+        background-size: 60%;
+        height: 87vh;
+    }
+
+    hr {
+        height: 1px;
+        background: #E8EAF1;
+        width: 100%;
+    }
+
+    .heading_sec {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        margin: 20px 0 40px;
+    }
+
+    .manifesto_list {
+        padding: 0;
+        width: 100%;
+        margin: 20px 0 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .manifesto_list li {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+            .manifesto_list li label {
+                width: 85%;
+            }
+
+    .chk {
+        margin-right: 15px;
+        width: 16px;
+        height: 16px;
+        margin-top: 4px;
+    }
+
+    .page4 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.8)
+    }
+
+    .page_inner {
+        width: 50%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+        .page_inner img {
+            margin-bottom: 20px;
+        }
+
+    .text_orange {
+        color: #FF4E34
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .item img {
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .owl-dots {
+        display: block !important
+    }
+
+    .grid_main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table {
+        background: #fff;
+
+    }
+
+    .img_arrow {
+        margin-left: 10px;
+    }
+
+    .table td {
+        vertical-align: middle
+    }
+
+    .table tr:nth-child(odd) {
+        background-color: rgba(47,128,237,0.2);
+    }
+
+    .date_heading {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    .top_inner_div {
+        width: 100%;
+        background-color: rgba(47,128,237,0.2);
+        padding: 10px;
+        margin-top: 20px;
+    }
+    /* .map_img {
+        width: 35%;
+        margin: 0 auto;
+        display: flex;
+        transition: transform 0.25s ease;
+        cursor: zoom-in;
+    }*/
+    .click-zoom input[type=checkbox] {
+        display: none
+    }
+
+    .click-zoom .map_img {
+        transition: transform 0.25s ease;
+        cursor: zoom-in;
+        width: 100%;
+    }
+
+    .click-zoom label {
+        width: 100%;
+    }
+
+    .click-zoom input[type=checkbox]:checked ~ img {
+        transform: scale(3);
+        cursor: zoom-out;
+    }
+
+    .nowrap {
+        white-space: nowrap
+    }
+
+    .table td, .table th {
+        font-size: 12px;
+    }
+
+    @@media only screen and (max-width:767px) {
+        /* #txtendDate:before {
+            content: attr(data-date);
+        }
+
+        #txtendDate::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+            display: none;
+        }
+
+        #txtendDate::-webkit-calendar-picker-indicator {
+            right: 0;
+            color: black;
+            opacity: 1;
+        }*/
+        .click-zoom input[type=checkbox]:checked ~ img {
+            transform: scale(1);
+            cursor: zoom-out
+        }
+
+        .table td {
+            font-size: 12px;
+        }
+
+        body {
+            background: #fff !important;
+        }
+
+        .page1 img {
+            width: 65%;
+        }
+
+        .page_inner {
+            width: 90%;
+        }
+
+        .page4 {
+            width: 100%;
+        }
+
+        .nowrap {
+            white-space: nowrap
+        }
+
+        .page3 {
+            padding: 20px 0
+        }
+    }
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div ng-app="myApp"  ng-controller="report4Controller">
+    
+    <div class="main_left_panel">
+        <div class="loading" style="display:none">
+            <img src="@Url.Content("~/Content/img/spinner.gif")" class="spinner" />
+        </div>
+        <div class="inner_div1">
+
+
+            <div class="page3" style="display:block">
+
+                <div class="grid_main">
+
+                    <div class="row table-responsive">
+                        <br />
+                        <ul class="nav nav-tabs">
+                            <li ><a data-toggle="tab" href="#home">By State</a></li>
+                            <li class="active"><a data-toggle="tab" href="#menu2">Registered List</a></li>
+
+
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade">
+                                <div id="divOccupation">
+                                    <table class="table table-bordered" id="tblSlots">
+                                        <thead><tr><th></th><th>State</th><th>Count</th></tr></thead>
+                                        <tr ng-repeat="item in ByState">
+                                            <td>{{$index+1}}</td>
+                                            <td class="nowrap">
+                                                <b>{{item.occupation}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <a href="" ng-click="ShowDetails(item,'Occupation')">{{item.cnt}} <img src="~/Content/img/left_arrow.png" class="img_arrow" /></a>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="row col-md-12" style="display: none; height: auto; overflow: auto" id="divOccupationDetails">
+                                    <button class="btn btn-info mb-2" ng-click="Back1(0)"><i class="fa fa-arrow-left"></i>&nbsp;Back</button>
+                                    <table class="table table-bordered" id="tblSlots">
+                                        <thead><tr><th></th><th>Name</th><th>Email</th><th>Mobile</th><th>Qualification</th><th>Gender</th>
+                                                                                                                            <th>DOB</th>
+                                                                                                                            <th>Video File</th>
+                                                                                                                            <th>Aadhar File</th><th>Created Date</th></tr></thead>
+                                        <tr ng-repeat="item in OccupationDetails">
+                                            <td>{{$index+1}}</td>
+                                            <td class="nowrap">
+                                                <b>{{item.name | uppercase}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.email_address}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.mobile_no}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.qualification}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.gender}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.dob}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <a href="{{item.file_path}}" target="_blank">View File <img src="~/Content/img/left_arrow.png" class="img_arrow" /></a>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <a href="{{item.aadhar_path}}" target="_blank">View File <img src="~/Content/img/left_arrow.png" class="img_arrow" /></a>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.format_date}} </b>
+
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                             
+                            <div id="menu2" class="tab-pane fade ">
+
+                                <div class="row col-md-12">
+                                    <div class=" col-md-8">
+                                        <input type="text" id="txtSearch" ng-model="searchkeyword" class="form_input" placeholder="search by name/mobile/email" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="javascript::" ng-click="SearchData()" class="btn btn-warning">Search</a>
+                                        <a href="javascript::" ng-click="Export2Excel('tblList')" class="btn btn-danger">Export</a>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-12">
+                                    <table class="table table-bordered" id="tblSlots">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Qualification</th>
+                                                <th>Gender</th>
+                                                <th>DOB</th>
+                                                <th>Video File</th>
+                                                <th>Aadhar File</th>
+                                                <th>Created Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tr ng-repeat="item in Summary">
+                                            <td>{{$index+1}}</td>
+                                            <td class="nowrap">
+                                                <b>{{item.name | uppercase}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.email_address}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.mobile_no}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.qualification}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.gender}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.dob}} </b>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <a href="{{item.file_path}}" target="_blank">View File <img src="~/Content/img/left_arrow.png" class="img_arrow" /></a>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <a href="{{item.aadhar_path}}" target="_blank">View File <img src="~/Content/img/left_arrow.png" class="img_arrow" /></a>
+
+                                            </td>
+                                            <td class="nowrap">
+                                                <b>{{item.format_date}} </b>
+
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="modal fade" id="ActivitiesGrid">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Reason</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+
+                        <div class="col-md-12">
+                            {{ReasonText}}
+                        </div>
+
+
+                    </form>
+                     
+
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button class="btn btn-no" data-bs-dismiss="modal">Close</button> 
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="UpdateCompany">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Update Company</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+
+                        <div class="col-md-12">
+                            <div class="form-group d-flex flex-column input">
+                                <label>Name</label>
+                                <input type="text" id="txtName" disabled ng-model="Name" class="form_input form-ext" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group d-flex flex-column input">
+                                <label>Mobile No</label>
+                                <input type="text" id="txtName" disabled ng-model="MobileNo" class="form_input form-ext" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group d-flex flex-column input">
+                                <label>Company</label>
+                                <input type="text" id="txtName" ng-model="Company" class="form_input form-ext" />
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button class="btn btn-no" ng-click="CloseModal()">Cancel</button>
+                    <button class="btn btn-yes" ng-click="ConfirmCompany()">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".left_main_panel").hide();
+    })
+</script>

@@ -151,6 +151,19 @@
             
         }
     }
+    .progress-wrapper {
+        width: 100%;
+    }
+
+        .progress-wrapper .progress {
+            background-color: #1caaec;
+            width: 0%;
+            padding: 5px 0px 5px 0px;
+            color: white;
+            height: 27px;
+            margin-top: 10px;
+            justify-content: center;
+        }
 </style>
 <div ng-app="myApp" ng-controller="mmsfellowshipController">
     <section class="position-relative">
@@ -315,9 +328,14 @@
                                 <div class="col-lg-8">
                                     <div class="custom-file">
                                         <input type="file" id="txtFile_phot" accept="image/*" ng-model="Image">
-                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label">Choose File</label>
+                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label">Choose File</label> 
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="progress-wrapper">
+                                <div id="progress-bar-file2" class="progress"></div>
                             </div>
                         </div>
 
@@ -332,6 +350,9 @@
                                 <div class="custom-file">
                                     <input type="file" id="myFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
                                     <label for="txtFile" id="lblFile" class="custom-file-label">Choose File</label>
+                                    <div class="progress-wrapper">
+                                        <div id="progress-bar-file1" class="progress"></div>
+                                    </div>
                                 </div>
 
                             </div>

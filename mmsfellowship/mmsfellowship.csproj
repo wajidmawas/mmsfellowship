@@ -178,6 +178,7 @@
     <Content Include="Content\fonts\Satoshi-Black.woff2" />
     <None Include="packages.config" />
     <Content Include="Views\Home\registration.cshtml" />
+    <Content Include="Views\Home\report4.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

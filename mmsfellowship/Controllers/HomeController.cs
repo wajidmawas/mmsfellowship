@@ -32,6 +32,12 @@ namespace mmsfellowship.Controllers
            // SendNotif("Hafeez", "hafeez.24@gmail.com");
             return View();
         }
+        [Route("A$FERD9194D")]
+        public ActionResult report4()
+        {
+            // SendNotif("Hafeez", "hafeez.24@gmail.com");
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -80,35 +86,81 @@ All India Professionals’ Congress";
 
         }
         [HttpPost]
+        public ActionResult upload_video_file()
+        {
+            var httpPostedFile = HttpContext.Request.Files.Count > 0 ? HttpContext.Request.Files[0] : null;
+
+            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + ("~/Profiles/")))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + ("Profiles/"));
+            }
+            string filnm = Guid.NewGuid().ToString(); 
+            if (HttpContext.Request.Files.Count > 0)
+            {
+
+                httpPostedFile = HttpContext.Request.Files["file"];
+                string extension = System.IO.Path.GetExtension(httpPostedFile.FileName);
+                filnm = filnm + extension;
+                string filePath = AppDomain.CurrentDomain.BaseDirectory + ("Profiles/") + "\\" + filnm;
+                httpPostedFile.SaveAs(filePath);
+            }
+            else
+                filnm = "";
+            return Json(new { Response = 200, FileType="Video", Data = System.Configuration.ConfigurationManager.AppSettings["ApiUrl"].ToString() + "Profiles/" + filnm, JsonRequestBehavior.AllowGet }); 
+        }
+        [HttpPost]
+        public ActionResult upload_aadhar_file()
+        {
+            var httpPostedFile = HttpContext.Request.Files.Count > 0 ? HttpContext.Request.Files[0] : null;
+
+            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + ("~/Profiles/")))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + ("Profiles/"));
+            }
+            string filnm = Guid.NewGuid().ToString();
+            if (HttpContext.Request.Files.Count > 0)
+            {
+
+                httpPostedFile = HttpContext.Request.Files["file"];
+                string extension = System.IO.Path.GetExtension(httpPostedFile.FileName);
+                filnm = filnm + extension;
+                string filePath = AppDomain.CurrentDomain.BaseDirectory + ("Profiles/") + "\\" + filnm;
+                httpPostedFile.SaveAs(filePath);
+            }
+            else
+                filnm = "";
+            return Json(new { Response = 200, FileType = "Image", Data = System.Configuration.ConfigurationManager.AppSettings["ApiUrl"].ToString() + "Profiles/" + filnm, JsonRequestBehavior.AllowGet });
+        }
+        [HttpPost]
         public ActionResult Savemmsfellowship()
         {
             try
             {
 
-                var httpPostedFile = HttpContext.Request.Files.Count > 0 ? HttpContext.Request.Files[0] : null;
+                //var httpPostedFile = HttpContext.Request.Files.Count > 0 ? HttpContext.Request.Files[0] : null;
 
-                if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + ("~/Profiles/")))
-                {
-                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + ("Profiles/"));
-                }
-                string filnm = Guid.NewGuid().ToString();
-                string videofilnm = Guid.NewGuid().ToString();
-                if (HttpContext.Request.Files.Count > 0)
-                {
-                    httpPostedFile = HttpContext.Request.Files["Aadhar"];
-                    string extension = System.IO.Path.GetExtension(httpPostedFile.FileName);
-                    filnm = filnm + extension;
-                    string filePath = AppDomain.CurrentDomain.BaseDirectory + ("Profiles/") + "\\" + filnm;
-                    httpPostedFile.SaveAs(filePath);
+                //if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + ("~/Profiles/")))
+                //{
+                //    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + ("Profiles/"));
+                //}
+                //string filnm = Guid.NewGuid().ToString();
+                //string videofilnm = Guid.NewGuid().ToString();
+                //if (HttpContext.Request.Files.Count > 0)
+                //{
+                //    httpPostedFile = HttpContext.Request.Files["Aadhar"];
+                //    string extension = System.IO.Path.GetExtension(httpPostedFile.FileName);
+                //    filnm = filnm + extension;
+                //    string filePath = AppDomain.CurrentDomain.BaseDirectory + ("Profiles/") + "\\" + filnm;
+                //    httpPostedFile.SaveAs(filePath);
 
-                    httpPostedFile = HttpContext.Request.Files["file"];
-                      extension = System.IO.Path.GetExtension(httpPostedFile.FileName);
-                    filnm = filnm + extension;
-                      filePath = AppDomain.CurrentDomain.BaseDirectory + ("Profiles/") + "\\" + filnm;
-                    httpPostedFile.SaveAs(filePath);
-                }
-                else
-                    filnm = "";
+                //    httpPostedFile = HttpContext.Request.Files["file"];
+                //    extension = System.IO.Path.GetExtension(httpPostedFile.FileName);
+                //    filnm = filnm + extension;
+                //    filePath = AppDomain.CurrentDomain.BaseDirectory + ("Profiles/") + "\\" + filnm;
+                //    httpPostedFile.SaveAs(filePath);
+                //}
+                //else
+                //    filnm = "";
                 ArrayList obj = new ArrayList();
                 obj.Add(HttpContext.Request.Form["Name"]);
                 obj.Add((HttpContext.Request.Form["DOB"]));
@@ -119,8 +171,8 @@ All India Professionals’ Congress";
                 obj.Add((HttpContext.Request.Form["Qualification"]));
                 obj.Add((HttpContext.Request.Form["District"]));
                 obj.Add((HttpContext.Request.Form["IPAddress"]));
-                obj.Add(System.Configuration.ConfigurationManager.AppSettings["ApiUrl"].ToString() + "Profiles/" + filnm);
-                obj.Add(System.Configuration.ConfigurationManager.AppSettings["ApiUrl"].ToString() + "Profiles/" + videofilnm);
+                obj.Add(HttpContext.Request.Form["VideoFile"]);
+                obj.Add(HttpContext.Request.Form["ImageFile"]); 
                 Common.InfoLogs("Comments Request Object before saving USP_APP_SAVEMMSFELLOWSHIP: " + JsonConvert.SerializeObject(obj));
                 DataSet dset = ServiceActionHelper.ExecuteSP(obj, "USP_APP_SAVEMMSFELLOWSHIP");
                 if (dset != null && dset.Tables.Count > 0 && dset.Tables[0].Rows.Count > 0)

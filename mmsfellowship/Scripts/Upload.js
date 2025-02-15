@@ -47,7 +47,238 @@ app.controller("dashboardController",["$scope", "$http", "$compile", function ($
   
 
 }])
-  
+
+app.controller("report4Controller", ["$scope", "$http", "$compile", function ($scope, $http, $compile) {
+    $scope.result1 = '';
+    $scope.bnyObject = {
+        ScheduleId: '',
+        mobileNo: '',
+        startDate: '',
+        endDate: '',
+        bny: []
+    };
+    $scope.SelectedSchedule = {};
+
+    $scope.ConfirmCompany = function () {
+        if ($scope.Company != undefined && $scope.Company != null && $scope.Company != "") {
+            $scope.GetMasters(70, $scope.Rid, $scope.Company, "");
+        }
+        else {
+            showToast("Invalid company");
+        }
+
+    }
+    $scope.Rid = 0;
+    $scope.EditCompany = function (Item) {
+        $scope.Rid = Item.id;
+        $scope.Name = Item.name;
+        $scope.MobileNo = Item.mobile_no;
+        $scope.Company = Item.company;
+        $("#divUpdateCompany").show();
+        $("#divConfirmedList").hide();
+    }
+    $scope.Back2Confirm = function () {
+        $("#divUpdateCompany").hide();
+        $("#divConfirmedList").show();
+    }
+    $(document).on('keypress', '#phone', function (e) {
+        if ($(e.target).prop('value').length >= 10) {
+            if (e.keyCode != 32) { return false }
+        }
+    })
+
+    $scope.keypress = function (e) {
+        var a = [];
+        var k = e.which;
+
+        for (i = 48; i < 58; i++)
+            a.push(i);
+
+        if (!(a.indexOf(k) >= 0))
+            e.preventDefault();
+    }
+    $scope.selectedLanguage = 1;
+
+    $scope.CloseModal = function () {
+        $("#detailsBox,#OtpBox").modal("hide");
+    }
+    $scope.CreateRequest = function (data, url) {
+        var req = {
+            method: 'POST',
+            url: url,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': '771BA032839246B9951A7A785721F35C'
+            },
+            data: JSON.stringify(data)
+        }
+        return req;
+    }
+    $scope.MobileNumber = '';
+
+    $scope.Questions = [];
+    $scope.Qno = 0;
+    $scope.UserLocation = '';
+    //localStorage.setItem("loginUser", '');
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            $scope.UserLocation = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        $scope.UserLocation = JSON.stringify(position);
+    }
+    getLocation();
+    $scope.Export2Excel = function (table) {
+        var htmls = "";
+        var uri = 'data:application/vnd.ms-excel;base64,';
+        var template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>';
+        var base64 = function (s) {
+            return window.btoa(unescape(encodeURIComponent(s)))
+        };
+
+        var format = function (s, c) {
+            return s.replace(/{(\w+)}/g, function (m, p) {
+                return c[p];
+            })
+        };
+
+        var table = $("#" + table)[0];
+        htmls = table.outerHTML;
+
+        var ctx = {
+            worksheet: 'Report',
+            table: htmls
+        }
+        var dt = new Date();
+
+        var link = document.createElement("a");
+        link.download = "Report.xls";
+        link.href = uri + base64(format(template, ctx));
+        link.click();
+    }
+    $scope.ShowDetails = function (item, flg) {
+        $("#divOccupation").hide();
+        $("#divOccupationDetails").show();
+        $scope.GetMasters(75, 0, item.occupation, "");
+
+    }
+    $scope.ReasonText = "";
+    $scope.ViewReason = function (_re) {
+
+        showToast_long(_re);
+    }
+    $scope.ShowLocationDetails = function (item, flg) {
+        $("#divLocation").hide();
+        $("#divLocationDetails").show();
+        $scope.GetMasters(75, 0, item.occupation, "");
+
+    }
+    $scope.SearchData = function () {
+        $scope.GetMasters(74, 0, $scope.searchkeyword, "");
+
+    }
+    $scope.Back1 = function (flg) {
+        if (flg == 0) {
+            $("#divOccupation").show();
+            $("#divOccupationDetails").hide();
+        }
+        else {
+            $("#divLocation").show();
+            $("#divLocationDetails").hide();
+        }
+
+
+
+    }
+    $scope.GetMasters = function (TypeId, FilterID, FilterText, FilterText1) {
+        //$scope.show = $sessionStorage.admin;  
+        var id = 0
+        var data = {
+            type: TypeId,
+            filterId: FilterID,
+            clientId: 0,
+            userId: id,
+            searchKey: FilterText,
+            filterText: FilterText1
+        }
+        var url = apiURL + 'v1/Admin/_getMasters'
+
+        $http($scope.CreateRequest(data, url)).then(function (response) {
+            $(".loading").hide()
+            if (TypeId == 98) {
+                $scope.ByState = response.data.objresult.Table;
+                $scope.Summary = response.data.objresult.Table1;
+                $("#menu2").addClass("in active")
+            }
+            if (TypeId == 75) {
+                $scope.OccupationDetails = response.data.objresult.Table;
+            }
+            if (TypeId == 74) {
+                $scope.Summary = response.data.objresult.Table;
+                $("#menu2").addClass("in active")
+            }
+
+            if (TypeId == 38) {
+
+            }
+
+
+        },
+            function (data) {
+                console.log("error occured")
+                return false;
+                // Handle error here
+            })
+
+    }
+    $scope.ScrollToBottom = function () {
+        setTimeout(function () {
+            var wtf = $('.main_div');
+            var height = wtf[0].scrollHeight;
+            wtf.scrollTop(height);
+            var wtf = $('.inner_div');
+            var height = wtf[0].scrollHeight;
+            wtf.scrollTop(height);
+        }, 500)
+    }
+
+    $scope.GetMasters(98, 0, "", "");
+
+    $('#visitor_msg').keydown(function (event) {
+        var id = event.key || event.which || event.keyCode || 0;
+        if (id == 'Enter') {
+            $scope.SubmitQuestion();
+        }
+    });
+    $scope.OTPSend = "";
+
+
+    function showToast_long(content = "Unknown error") { //You can change the default value
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        //Change the text (not mandatory, but I think you might be willing to do it)
+        x.innerHTML = content;
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 15000);
+    }
+
+
+
+    $scope.showHome = function () {
+        window.location.href = "/home/index";
+    }
+
+
+
+}])
 app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce", function ($scope, $http, $compile, $sce) {
     $scope.result1 = '';
     $scope.manifestoObject = {
@@ -78,7 +309,57 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
         var file = $('#myFile')[0].files[0].name;
         $("#lblFile").html(file);
 
+        var formdata = new FormData();
+
+        formdata.append('file', $('#myFile')[0].files[0]);
+
+        var request = new XMLHttpRequest();
+
+        request.upload.addEventListener('progress', function (e) {
+            var file1Size = $('#myFile')[0].files[0].size;
+
+            if (e.loaded <= file1Size) {
+                var percent = Math.round(e.loaded / file1Size * 100);
+                $('#progress-bar-file1').width(percent + '%').html(percent + '%');
+            }
+
+            if (e.loaded == e.total) {
+                $('#progress-bar-file1').width(100 + '%').html(100 + '%');
+           
+            }
+        });
+
+        request.open('post', '/home/upload_video_file');
+        request.timeout = 45000;
+        request.send(formdata); 
+        request.addEventListener("load", transferComplete);
+        request.addEventListener("error", transferFailed); 
+
     });
+    $scope.VideoFile = '';
+    $scope.AadharFile = '';
+    function transferComplete(evt) {
+        var fileresult = JSON.parse(evt.target.responseText);
+        if (fileresult.Response == 200 && fileresult.FileType=='Video') {
+            $scope.VideoFile = fileresult.Data;
+            setTimeout(function () {
+                $('#progress-bar-file1').hide()
+            }, 5000)
+        }
+        if (fileresult.Response == 200 && fileresult.FileType == 'Image') {
+            $scope.AadharFile = fileresult.Data;
+            setTimeout(function () {
+                $('#progress-bar-file2').hide()
+            }, 5000)
+        }
+
+        // Do something
+    }
+
+    function transferFailed(evt) {
+        console.log("An error occurred while transferring the file.");
+        // Do something
+    }
     $("#txtFile_phot").on("change", function () {
         var file = $("#txtFile_phot").get(0).files;
         if (file.length > 0) {
@@ -91,7 +372,32 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
  
         var file = $('#txtFile_phot')[0].files[0].name;
         $("#File_phot").html(file);
-        
+
+        var formdata = new FormData();
+
+        formdata.append('file', $('#txtFile_phot')[0].files[0]);
+
+        var request = new XMLHttpRequest();
+
+        request.upload.addEventListener('progress', function (e) {
+            var file1Size = $('#txtFile_phot')[0].files[0].size;
+
+            if (e.loaded <= file1Size) {
+                var percent = Math.round(e.loaded / file1Size * 100);
+                $('#progress-bar-file2').width(percent + '%').html(percent + '%');
+            }
+
+            if (e.loaded == e.total) {
+                $('#progress-bar-file2').width(100 + '%').html(100 + '%'); 
+            }
+        });
+
+        request.open('post', '/home/upload_aadhar_file');
+        request.timeout = 45000;
+        request.send(formdata);
+        request.addEventListener("load", transferComplete);
+        request.addEventListener("error", transferFailed); 
+
 
     });
     $scope.shareLink = function (_t) {
@@ -147,11 +453,11 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             showToast("Invalid Qualification");
             return false;
         }
-        else if (aadhar_file == null || aadhar_file.length == 0) {
+        else if ($scope.AadharFile == null || $scope.AadharFile =='') {
             showToast("Invalid aadhar file");
             return false;
         } 
-        else if (file == null || file.length == 0) {
+        else if ($scope.VideoFile == null || $scope.VideoFile == '') {
             showToast("Invalid video file");
             return false;
         } 
@@ -171,6 +477,8 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             data.append("EmailAddress", $scope.EmailAddress);
             data.append("StateID", $scope.StateID);
             data.append("District", $scope.District);
+            data.append("VideoFile", $scope.VideoFile);
+            data.append("ImageFile", $scope.AadharFile);
             data.append("Qualification", $scope.Qualification);
             data.append("IPAddress", $scope.UserLocation);  
             $.ajax({
