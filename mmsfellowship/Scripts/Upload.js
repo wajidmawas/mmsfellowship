@@ -314,7 +314,7 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
         formdata.append('file', $('#myFile')[0].files[0]);
 
         var request = new XMLHttpRequest();
-
+        $('#progress-bar-file1').show()
         request.upload.addEventListener('progress', function (e) {
             var file1Size = $('#myFile')[0].files[0].size;
 
@@ -329,8 +329,7 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             }
         });
 
-        request.open('post', '/home/upload_video_file');
-        request.timeout = 45000;
+        request.open('post', '/home/upload_video_file'); 
         request.send(formdata); 
         request.addEventListener("load", transferComplete);
         request.addEventListener("error", transferFailed); 
@@ -339,20 +338,27 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
     $scope.VideoFile = '';
     $scope.AadharFile = '';
     function transferComplete(evt) {
-        var fileresult = JSON.parse(evt.target.responseText);
-        if (fileresult.Response == 200 && fileresult.FileType=='Video') {
-            $scope.VideoFile = fileresult.Data;
-            setTimeout(function () {
-                $('#progress-bar-file1').hide()
-            }, 5000)
-        }
-        if (fileresult.Response == 200 && fileresult.FileType == 'Image') {
-            $scope.AadharFile = fileresult.Data;
-            setTimeout(function () {
-                $('#progress-bar-file2').hide()
-            }, 5000)
-        }
+        try {
+            // alert(evt.target.responseText)
+           // document.write(evt.target.responseText)
+            var fileresult = JSON.parse(evt.target.responseText);
+            //alert(fileresult);
+            if (fileresult.Response == 200 && fileresult.FileType == 'Video') {
+                $scope.VideoFile = fileresult.Data;
+                setTimeout(function () {
+                    $('#progress-bar-file1').hide()
+                }, 5000)
+            }
+            if (fileresult.Response == 200 && fileresult.FileType == 'Image') {
+                $scope.AadharFile = fileresult.Data;
+                setTimeout(function () {
+                    $('#progress-bar-file2').hide()
+                }, 5000)
+            }
 
+        } catch (e) {
+           // alert(e);
+        }
         // Do something
     }
 
@@ -372,7 +378,7 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
  
         var file = $('#txtFile_phot')[0].files[0].name;
         $("#File_phot").html(file);
-
+        $('#progress-bar-file2').show()
         var formdata = new FormData();
 
         formdata.append('file', $('#txtFile_phot')[0].files[0]);

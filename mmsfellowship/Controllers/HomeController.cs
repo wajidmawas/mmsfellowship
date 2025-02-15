@@ -88,6 +88,7 @@ All India Professionals’ Congress";
         [HttpPost]
         public ActionResult upload_video_file()
         {
+            Common.InfoLogs("Comments Request Object before saving upload_video_file: " );
             var httpPostedFile = HttpContext.Request.Files.Count > 0 ? HttpContext.Request.Files[0] : null;
 
             if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + ("~/Profiles/")))
@@ -111,6 +112,7 @@ All India Professionals’ Congress";
         [HttpPost]
         public ActionResult upload_aadhar_file()
         {
+            Common.InfoLogs("Comments Request Object before saving upload_aadhar_file: ");
             var httpPostedFile = HttpContext.Request.Files.Count > 0 ? HttpContext.Request.Files[0] : null;
 
             if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + ("~/Profiles/")))
