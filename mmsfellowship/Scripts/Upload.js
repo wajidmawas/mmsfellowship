@@ -15,18 +15,7 @@ app.controller("dashboardController",["$scope", "$http", "$compile", function ($
         localStorage.setItem('userDetails', '');
         window.location.href = baseURL + '/home/index';
     }
-    if (localStorage.getItem("loginUser") != null && localStorage.getItem("loginUser") != "" &&
-        localStorage.userDetails != undefined) {
-        $scope.Name = JSON.parse(localStorage.userDetails)[0].name;
-        $scope.Role = JSON.parse(localStorage.userDetails)[0].role;
-        $("#profile_img").attr("src", JSON.parse(localStorage.userDetails)[0].filePath)
-        $("#login_btn").hide();
-        $("#menu").show();
-    }
-    else {
-        $("#menu").hide();
-        $("#login_btn").show();
-    }
+     
     $scope.showLogin = function () {
         if (localStorage.getItem("loginUser") != undefined && localStorage.getItem("loginUser") != "")
             window.location.href = baseURL + "/activites";
@@ -36,6 +25,10 @@ app.controller("dashboardController",["$scope", "$http", "$compile", function ($
             $("body, .main_div").addClass("hidden")
         }
     }
+    if (localStorage.getItem("lan") == "" || localStorage.getItem("lan") == undefined)
+        localStorage.setItem("lan", "En");
+    $scope.language = localStorage.getItem("lan");
+    $("#drplanguage").val($scope.language)
     $scope.closemenu = function () {
         $(".sidemenu").removeClass("sidemenushow")
         $("body, .main_div").removeClass("hidden")
@@ -44,7 +37,10 @@ app.controller("dashboardController",["$scope", "$http", "$compile", function ($
         $(".sidemenu").addClass("sidemenushow");
         $("body, .main_div").addClass("hidden")
     }
-  
+    $scope.changelanguge = function () {
+        localStorage.setItem("lan", $scope.language); 
+        window.location.reload(true);
+    }
 
 }])
 
@@ -286,6 +282,9 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
         mobileNo: ''
     };
 
+    $scope.language1 = "En";
+    if (localStorage.getItem("lan") != "" && localStorage.getItem("lan") != undefined)
+        $scope.language1 = localStorage.getItem("lan");
     var now = new Date(),
     minDate = now.toISOString().substring(0, 10);
     $('#txtDOB').prop('max', minDate);

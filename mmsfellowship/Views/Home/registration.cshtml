@@ -170,15 +170,19 @@
 
         <img src="~/Content/images/main_slider1.jpg" class="w-100 Mainslider" />
         <div class="container">
-            <div class="main_title"> 
+            <div class="main_title">
                 <a href="/"><img src="~/Content/images/main_logo_white.png" /></a>
-                <h1 class="text-white">
+                <h1 class="text-white" ng-show="language1=='En'">
                     CHAMPIONING<br />
                     YOUNG LEADERS<br />
                     FOR A BETTER<br />
                     TOMORROW
                 </h1>
-               
+                <h1 class="text-white" ng-show="language1=='Hi'">
+                    युवा नेताओं का समर्थन<br />
+                    बेहतर कल के लिए
+                </h1>
+
             </div>
         </div>
 
@@ -192,7 +196,7 @@
                 <div class="col-md-6 mx-lg-auto"> 
                     <div class="overlay" id="content" style="display:none">
                         <div class="row col-md-12 msg">
-                            <p style="color:white">
+                            <p style="color:white" ng-show="language1=='En'">
                                 Thank you for your interest in the Dr. Manmohan Singh Fellows Program by the All India Professionals’ Congress. We are thrilled to see your passion for public service and leadership, and we appreciate your commitment to shaping a brighter future for India.
                                 <br /><br />
                                 <b>Next Steps</b><br /><br />
@@ -213,11 +217,34 @@
                                 Dr. Manmohan Singh Fellows Program Team<br />
                                 All India Professionals’ Congress
                             </p>
+                            <p style="color:white" ng-show="language1=='En'">
+                                डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम में आपकी रुचि के लिए धन्यवाद। हम आपकी जनसेवा और नेतृत्व के प्रति जुनून को देखकर उत्साहित हैं और भारत के उज्जवल भविष्य को संवारने के प्रति आपकी प्रतिबद्धता की सराहना करते हैं।
 
-                            <button class="btn btn-warning mt-3 mb-3 text-white" ng-click="close()" style="height:45px">Close</button>
+                                <br /><br />
+
+                                <b>अगले चरण</b><br /><br />
+
+                                आपका आवेदन सफलतापूर्वक प्राप्त हो गया है। चयन प्रक्रिया के हिस्से के रूप में, आगे की उम्मीद करें:<br /><br />
+
+                                1. **आवेदन समीक्षा** – हमारी टीम आपकी पात्रता मानदंडों और समाज में बदलाव लाने के आपके जुनून के आधार पर आपके आवेदन का मूल्यांकन करेगी।<br />
+
+                                2. **वीडियो सबमिशन** – यदि आपने अभी तक नहीं किया है, तो कृपया अपना 3-मिनट का वीडियो रिकॉर्ड करें, जिसमें आप अपना परिचय दें और भारत के भविष्य के लिए अपनी दृष्टि साझा करें, और इसे <a href="mailto:mmsfellows@profcongress.in" class="text-white">mmsfellows@profcongress.in</a> पर ईमेल करें।<br />
+
+                                3. **व्यक्तिगत साक्षात्कार** – शॉर्टलिस्ट किए गए उम्मीदवारों को हमारे चयन समिति के साथ बातचीत के लिए आमंत्रित किया जाएगा, जहां वे अपने विचारों और आकांक्षाओं पर चर्चा कर सकेंगे।<br /><br />
+
+                                हम आपके उत्साह और आवेदन के लिए समय निकालने की सराहना करते हैं। यदि आपके कोई प्रश्न हैं या आपको किसी सहायता की आवश्यकता है, तो कृपया <a href="mailto:mmsfellows@profcongress.in" class="text-white">mmsfellows@profcongress.in</a> पर संपर्क करें।<br /><br />
+
+                                अपने आवेदन की स्थिति पर अपडेट के लिए जुड़े रहें!
+                                <br /><br />
+
+                                **सादर,**<br />
+                                **डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम टीम**<br />
+                                **ऑल इंडिया प्रोफेशनल्स कांग्रेस**
+                            </p>
+                                <button class="btn btn-warning mt-3 mb-3 text-white" ng-click="close()" style="height:45px">Close</button>
                         </div>
                     </div>
-                    <h3 class="mb-3 mt-5 title font-normal divRegister"><b>Register</b></h3>
+                    <h3 class="mb-3 mt-5 title font-normal divRegister"><b>{{language1=='En' ? 'Register':'रजिस्टर करें'}}</b></h3>
                     <div class="row" id="divForm">
                         <div class="loading" style="display:none">
                             <img src="@Url.Content("~/Content/images/spinner.gif")" class="spinner" />
@@ -225,7 +252,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">Full Name *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Full Name *':'पूरा नाम *'}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="text" id="txtName" ng-model="Name" class="form-control" />
@@ -235,7 +262,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">DOB</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'DOB *':'जन्म तिथि'}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="date" id="txtDOB" ng-model="DOB" class="form-control" />
@@ -245,7 +272,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">Gender *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Gender *':'लिंग *'}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-select" id="drpGender" ng-model="Gender">
@@ -260,7 +287,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">Mobile No *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Mobile No *':'मोबाइल नंबर*'}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="text" id="txtMobileNo" ng-model="MobileNo" class="form-control" />
@@ -270,7 +297,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">Email *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Email *':'ईमेल *'}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="text" id="txtEmail" ng-model="EmailAddress" class="form-control" />
@@ -281,7 +308,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">State *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'State *':'राज्य '}} </label>
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-select" id="drpStateList" ng-model="StateID" ng-change="FilterDistrict()">
@@ -294,7 +321,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">District *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'District *':'जिला * '}} </label>
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-select" id="drpStateList" ng-model="District">
@@ -308,7 +335,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">Qualification *</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Qualification *':'शैक्षणिक योग्यता * '}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-select" id="drpStateList" ng-model="Qualification">
@@ -323,12 +350,12 @@
                         <div class="col-md-12 bdr_yellor mb-3 mt-3">
                             <div class="row g-3 align-items-center">
                                 <div class="col-lg-4">
-                                    <label for="inputPassword6" class="col-form-label">  Upload Aadhar card *</label>
+                                    <label for="inputPassword6" class="col-form-label">  {{language1=='En' ? 'Upload Aadhar Card *':'आधार कार्ड अपलोड करें * '}}</label>
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="custom-file">
                                         <input type="file" id="txtFile_phot" accept="image/*" ng-model="Image">
-                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label">Choose File</label> 
+                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label"> {{language=='En' ? 'Choose File *':'फ़ाइल चुनें * '}}</label> 
                                     </div>
                                 </div>
                             </div>
@@ -341,15 +368,21 @@
 
                         <div class="col-md-12 bdr-btm_yellow">
                             <div class="form-group d-flex flex-column input">
-                                <label>
+                                <label ng-show="language1=='En'">
                                     Submit a video (not more than 2 mins) answering the following question,
                                     You may record the answer in the language of your choice
                                     <br /><br />
                                     <b>“What is one change you are most determined to bring to Indian politics, and why?”</b>*
                                 </label>
+                                <label ng-show="language1=='Hi'">
+                                    निम्नलिखित प्रश्न का उत्तर देते हुए 2 मिनट से अधिक का वीडियो सबमिट करें,
+                                    आप अपनी पसंदीदा भाषा में उत्तर रिकॉर्ड कर सकते हैं
+                                    <br /><br />
+                                          <b>“भारतीय राजनीति में आप कौन सा एक बदलाव लाने के लिए सबसे अधिक संकल्पित हैं, और क्यों?”</b>*
+                                </label>
                                 <div class="custom-file">
                                     <input type="file" id="myFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
-                                    <label for="txtFile" id="lblFile" class="custom-file-label">Choose File</label>
+                                    <label for="txtFile" id="lblFile" class="custom-file-label">{{language1=='En' ? 'Choose File *':'फ़ाइल चुनें * '}}</label>
                                     <div class="progress-wrapper">
                                         <div id="progress-bar-file1" class="progress"></div>
                                     </div>
@@ -358,7 +391,7 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="margin-top:5%;margin-bottom:5%">
-                            <button class="btn btn-warning w-100 text-white" id="btnSubmit" ng-click="SaveRecord()">Submit</button>
+                            <button class="btn btn-warning w-100 text-white" id="btnSubmit" ng-click="SaveRecord()">{{language1=='En' ? 'Submit':'सबमिट करें '}}</button>
                         </div>
                     </div>
                 </div>
