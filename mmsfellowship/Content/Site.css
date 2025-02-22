@@ -288,6 +288,83 @@ p{
     width: 32px;
 }
 
+
+label {
+    display: inline;
+}
+
+.radio-1 {
+    width: 193px;
+}
+
+.button-holder {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5% 5%;
+}
+.button-holder span{
+    display:flex;
+    align-items:center;
+    margin:0 1%;
+    font-size:12px;
+
+}
+.regular-radio {
+    display: none;
+}
+
+    .regular-radio + label {
+        background-color: #ffffff;
+        border: 2px solid #1490e7;
+        border-radius: 50px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 -15px 10px -12px rgba(0, 0, 0, 0.05) inset;
+        display: inline-block;
+        padding: 9px;
+        position: relative;
+        margin-right: 5px;
+    }
+
+        .regular-radio + label:before {
+            background: none repeat scroll 0 0 #FDFDFD;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+            content: " ";
+            font-size: 36px;
+            height: 8px;
+            left: 5px;
+            position: absolute;
+            top: 5px;
+            width: 8px;
+        }
+
+    .regular-radio:checked + label:after {
+        background: none repeat scroll 0 0 #1490e7;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+        content: " ";
+        font-size: 36px;
+        height: 8px;
+        left: 5px;
+        position: absolute;
+        top: 5px;
+        width: 8px;
+    }
+
+    .regular-radio:checked + label {
+        background-color: #fff;
+        border: 2px solid #1490e7;
+        color: #99a1a7;
+        padding: 9px;
+    }
+
+        .regular-radio + label:active, .regular-radio:checked + label:active {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+        }
+
+
 @media screen and (max-width: 767px) {
     body { 
         font-size: 14px;

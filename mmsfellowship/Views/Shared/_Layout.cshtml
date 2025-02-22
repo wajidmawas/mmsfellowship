@@ -31,7 +31,10 @@
 
 </head>
 <body ng-app="myApp" ng-controller="dashboardController">
-
+    <div class="button-holder">
+        <span><input type="radio" checked="" class="regular-radio" name="radio-1-set" id="radio-1-set" ng-model="language" value="En" ng-change="changelanguge()"><label for="radio-1-set"></label>English</span>
+       <span> <input type="radio" checked="" class="regular-radio" name="radio-1-set" id="radio-2-set" ng-model="language" value="Hi" ng-change="changelanguge()"><label for="radio-2-set"></label>Hindi</span>
+    </div>
     <div id="navbar">
         <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
             <div class="container">
@@ -43,12 +46,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto" style="font-size: 14px;">
-                        <li class="nav-item additional-option d-lg-block" >
-                            <select class="form-select" id="drplanguage" ng-change="changelanguge()" ng-model="language"> 
+                        @*<li class="nav-item additional-option d-lg-block">
+                            <select class="form-select" id="drplanguage" ng-change="changelanguge()" ng-model="language">
                                 <option value="En">English</option>
-                                <option value="Hi">Hindi</option> 
-                            </select> 
-                        </li>
+                                <option value="Hi">Hindi</option>
+                            </select>
+                        </li>*@
                         <li class="nav-item additional-option d-lg-block">
                             <a class="nav-link" href="#Home">{{language1=='En' ? 'Home':'होम'}}</a>
                         </li>
