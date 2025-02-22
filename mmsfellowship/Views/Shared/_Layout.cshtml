@@ -43,29 +43,29 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto" style="font-size: 14px;">
-                        <li class="nav-item additional-option d-lg-block">
+                        <li class="nav-item additional-option d-lg-block" >
                             <select class="form-select" id="drplanguage" ng-change="changelanguge()" ng-model="language"> 
                                 <option value="En">English</option>
                                 <option value="Hi">Hindi</option> 
                             </select> 
                         </li>
                         <li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="#Home">Home</a>
+                            <a class="nav-link" href="#Home">{{language1=='En' ? 'Home':'होम'}}</a>
                         </li>
                         <li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#about">{{language1=='En' ? 'About':'परिचय'}}</a>
                         </li>
                         <li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="#why">Why Apply</a>
+                            <a class="nav-link" href="#why">{{language1=='En' ? 'Why Apply':'क्यों आवेदन करें'}}</a>
                         </li>
                         <li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="#process">Selection Process</a>
+                            <a class="nav-link" href="#process">{{language1=='En' ? 'Selection Process':'चयन प्रक्रिया'}}</a>
                         </li>
                         <li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="#Timeline">Timeline</a>
+                            <a class="nav-link" href="#Timeline">{{language1=='En' ? 'Timeline':'समयरेखा'}}</a>
                         </li>
                         <li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="@Url.Action("registration","home")">Apply Now</a>
+                            <a class="nav-link" href="@Url.Action("registration","home")">{{language1=='En' ? 'Apply Now':'अभी आवेदन करें'}}</a>
                         </li>
 
 
@@ -86,17 +86,17 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="ftitle text-white">
-                        QUICK LINKS
+                        {{language1=='En' ? 'QUICK LINKS':'त्वरित लिंक'}}
                     </h2>
                     <ul class="bottom_nav">
                         <li>
-                            <a href="#about">About</a>
+                            <a href="#about">{{language1=='En' ? 'About':'परिचय'}}</a>
                         </li>
                         <li>
-                            <a href="#process">Fellowship Process</a>
+                            <a href="#process">{{language1=='En' ? 'Fellowship Process':'फेलोशिप प्रक्रिया'}}</a>
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#">{{language1=='En' ? 'Contact Us':'संपर्क करें'}}</a>
                         </li>
                     </ul>
                 </div>

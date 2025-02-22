@@ -2,19 +2,23 @@
     ViewBag.Title = "Home Page";
 }
 
-<main>
+<main ng-controller="dashboardController">
     <section class="position-relative">
 
         <img src="~/Content/images/main_slider.jpg" class="w-100 Mainslider" />
         <div class="container">
             <div class="main_title">
                 <img src="~/Content/images/aipc_logo.png" />
-                <h1>
-                    Get Mentored<br />
-                    today to lead<br />
-                    India tomorrow!
+                <h1 ng-show="language1=='En'">
+                    GET MENTORED<BR />
+                    TODAY TO LEAD<BR />
+                    INDIA TOMORROW!
                 </h1>
-                <a href="/apply" class="btn btn_main">Apply Now</a>
+                <h1 ng-show="language1=='Hi'">
+                    युवा नेताओं का समर्थन<BR />
+                    बेहतर कल के लिए
+                </h1>
+                <a href="/apply" class="btn btn_main">{{language1=='En' ? 'Apply Now':'अभी आवेदन करें'}}</a>
             </div>
         </div>
 
@@ -27,7 +31,7 @@
                     <img src="~/Content/images/abt_img.jpg" class="w-100" />
                 </div>
                 <div class="col-lg-6 ms-lg-auto">
-                    <div class="abt_div">
+                    <div class="abt_div" ng-show="language1=='En'">
                         <h1 class="title">
                             Dreaming of a<br />
                             brighter future for india?<br />
@@ -45,6 +49,20 @@
                             innovative, and impactful.
                         </p>
                     </div>
+
+                    <div class="abt_div" ng-show="language1=='Hi'">
+                        <h1 class="title">
+                            भारत के उज्जवल भविष्य का सपना देख रहे हैं?<br/>
+                            आज ही इसे बनाने के लिए काम करें!<br />
+                        </h1>
+                        <p>
+                            <br />
+                            डॉ. मनमोहन सिंह फेलोशिप प्रोग्राम, ऑल इंडिया प्रोफेशनल्स कांग्रेस की एक पहल है, जिसका उद्देश्य भारत के जुनूनी युवा प्रतिभाओं को परिवर्तनकारी नेता बनने के लिए सशक्त बनाना है।
+                        </p>
+                        <p>
+                            मार्गदर्शन, प्रगतिशील राजनीति के व्यावहारिक अनुभव और सार्वजनिक नीति में सहभागिता के माध्यम से,<br /> यह फेलोशिप ऐसे नेताओं को तैयार करती है जो समावेशी, नवोन्मेषी और प्रभावशाली भविष्य का निर्माण कर सकें।
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,7 +73,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="title text-white">
-                        WHY CHOOSE DR. MANMOHAN SINGH FELLOWS PROGRAM?
+                        {{language1=='En' ? 'WHY CHOOSE DR. MANMOHAN SINGH FELLOWS PROGRAM?':'डॉ. मनमोहन सिंह फेलोशिप प्रोग्राम क्यों चुनें?'}}
                     </h1>
                 </div>
             </div>
@@ -65,12 +83,11 @@
                         <img src="~/Content/images/visionaries_icon.png" />
                     </div>
                     <h4 class="sub_title">
-                        LEARN FROM VISIONARIES
+                        {{language1=='En' ? 'LEARN FROM VISIONARIES':'दूरदर्शी नेताओं से सीखें'}}
                     </h4>
                     <p class="text-white">
-                        Work closely with India’s top
-                        leaders and thinkers shaping
-                        the nation’s future.
+                        {{language1=='En' ? 'Work closely with India’s top leaders and thinkers shaping the nation’s future.':'भारत के शीर्ष नेताओं और विचारकों के साथ मिलकर काम करें, जो राष्ट्र के भविष्य को आकार दे रहे हैं।'}}
+
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -78,10 +95,11 @@
                         <img src="~/Content/images/world_Impact_icon.png" />
                     </div>
                     <h4 class="sub_title">
-                        DRIVE REAL-WORLD IMPACT
+                        {{language1=='En' ? 'DRIVE REAL-WORLD IMPACT':'वास्तविक दुनिया में प्रभाव पैदा करें।'}}
                     </h4>
                     <p class="text-white">
-                        Contribute to transformative projects addressing national and local challenges.
+                        {{language1=='En' ? 'Contribute to transformative projects addressing national and local challenges.':'राष्ट्रीय और स्थानीय चुनौतियों का समाधान करने वाले परिवर्तनकारी परियोजनाओं में योगदान दें।'}}
+
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -89,10 +107,11 @@
                         <img src="~/Content/images/national_network_icon.png" />
                     </div>
                     <h4 class="sub_title">
-                        JOIN A NATIONAL NETWORK
+                        {{language1=='En' ? 'DRIVE REAL-WORLD IMPACT':'एक राष्ट्रीय नेटवर्क से जुड़ें।'}}
                     </h4>
                     <p class="text-white">
-                        Collaborate with progressive peers committed to advancing India’s growth story.
+                        {{language1=='En' ? 'Collaborate with progressive peers committed to advancing India’s growth story.':'प्रगतिशील साथियों के साथ सहयोग करें जो भारत की विकास गाथा को आगे बढ़ाने के लिए प्रतिबद्ध हैं।'}}
+
                     </p>
                 </div>
             </div>
@@ -103,9 +122,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="title">
-                        WHO WE’RE LOOKING FOR
+                        {{language1=='En' ? 'WHO WE’RE LOOKING FOR':'हम किनकी तलाश कर रहे हैं?'}}
+
                     </h1>
-                    <p class="small_fnt">Preference for those coming from rural/modest background.</p>
+                    <p class="small_fnt">
+                        {{language1=='En' ? 'Preference for those coming from rural/modest background.':'ग्रामीण या साधारण पृष्ठभूमि से आने वाले उम्मीदवारों को प्राथमिकता दी जाएगी।'}}
+
+                    </p>
                 </div>
             </div>
             <div class="row mt-4">
@@ -115,7 +138,9 @@
                             <div class="top_img1">
                                 <img src="~/Content/images/indian_citizen_icon.png" />
                             </div>
-                            <p class="small_fnt1">Indian citizen, 30 years or younger</p>
+                            <p class="small_fnt1">
+                                {{language1=='En' ? 'Indian citizen, 30 years or younger':'भारतीय नागरिक, 30 वर्ष या उससे कम आयु।'}}
+                            </p>
                         </div>
                     </div>
 
@@ -126,7 +151,9 @@
                             <div class="top_img1">
                                 <img src="~/Content/images/bachelors_icon.png" />
                             </div>
-                            <p class="small_fnt1">Holds a Bachelor’s degree in any discipline</p>
+                            <p class="small_fnt1">
+                                {{language1=='En' ? 'Holds a Bachelor’s degree in any discipline':'किसी भी विषय में स्नातक की डिग्री धारक हो।'}}
+                            </p>
                         </div>
                     </div>
 
@@ -137,7 +164,9 @@
                             <div class="top_img1">
                                 <img src="~/Content/images/leadership_icon.png" />
                             </div>
-                            <p class="small_fnt1">Demonstrates a passion for public service, leadership, or societal change</p>
+                            <p class="small_fnt1">
+                                {{language1=='En' ? 'Demonstrates a passion for public service, leadership, or societal change':'सार्वजनिक सेवा, नेतृत्व या सामाजिक परिवर्तन के प्रति जुनून प्रदर्शित करता हो'}}
+                            </p>
                         </div>
                     </div>
 
@@ -148,7 +177,9 @@
                             <div class="top_img1">
                                 <img src="~/Content/images/solutions_driven_icon.png" />
                             </div>
-                            <p class="small_fnt1">Embodies progressive, inclusive thinking and a solutions-driven mindset</p>
+                            <p class="small_fnt1">
+                                {{language1=='En' ? 'Embodies progressive, inclusive thinking and a solutions-driven mindset':'प्रगतिशील, समावेशी सोच और समाधान-केंद्रित दृष्टिकोण को अपनाने वाला।'}}
+                            </p>
                         </div>
                     </div>
 
@@ -159,7 +190,9 @@
                             <div class="top_img1">
                                 <img src="~/Content/images/work_experience_icon.png" />
                             </div>
-                            <p class="small_fnt1">Work experience is an asset but not mandatory</p>
+                            <p class="small_fnt1">
+                                {{language1=='En' ? 'Work experience is an asset but not mandatory':'कार्य अनुभव एक अतिरिक्त योग्यता है, लेकिन अनिवार्य नहीं है।'}}
+                            </p>
                         </div>
                     </div>
 
@@ -173,7 +206,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="title text-white">
-                        APPLICATION AND SELECTION PROCESS
+                        {{language1=='En' ? 'APPLICATION AND SELECTION PROCESS':'आवेदन और चयन प्रक्रिया'}}
+
                     </h1>
                 </div>
             </div>
@@ -183,11 +217,11 @@
                         <img src="~/Content/images/1.png" />
                     </div>
                     <h4 class="sub_title">
-                        SUBMIT YOUR APPLICATION
+                        {{language1=='En' ? 'SUBMIT YOUR APPLICATION':'अपना आवेदन जमा करें'}}
                     </h4>
                     <p class="text-white">
-                        Provide basic details +
-                        Aadhaar upload
+                        {{language1=='En' ? ' Provide basic details + Aadhaar upload':'मूलभूत विवरण प्रदान करें + आधार अपलोड करें'}}
+
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -195,10 +229,11 @@
                         <img src="~/Content/images/2.png" />
                     </div>
                     <h4 class="sub_title">
-                        SHARE YOUR VISION
+                        {{language1=='En' ? 'SHARE YOUR VISION':'अपनी दृष्टि साझा करें'}}
                     </h4>
                     <p class="text-white">
-                        Record a 3 minutes video introducing yourself and your vision for India’s future
+                        {{language1=='En' ? 'Record a 3 minutes video introducing yourself and your vision for India’s future':'अपना परिचय और भारत के भविष्य के लिए अपनी दृष्टि प्रस्तुत करते हुए 3 मिनट का वीडियो रिकॉर्ड करें।'}}
+
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -206,12 +241,10 @@
                         <img src="~/Content/images/3.png" />
                     </div>
                     <h4 class="sub_title">
-                        PERSONAL INTERVIEW
+                        {{language1=='En' ? 'PERSONAL INTERVIEW':'व्यक्तिगत साक्षात्कार'}}
                     </h4>
                     <p class="text-white">
-                        Engage with the selection
-                        committee to present your
-                        ideas and aspirations
+                        {{language1=='En' ? 'Engage with the selection committee to present your ideas and aspirations':'चयन समिति के साथ बातचीत करें और अपने विचार व आकांक्षाएँ प्रस्तुत करें।'}}
                     </p>
                 </div>
             </div>
@@ -222,31 +255,44 @@
             <div class="row">
                 <div class="col-lg-3">
                     <h1 class="title">
-                        LEADERS <br />BEHIND THE <br />FELLOWSHIP
+                        {{language1=='En' ? 'LEADERS BEHIND THE FELLOWSHIP':'फेलोशिप के पीछे के नेता'}}
+
                     </h1>
-                    <p>Our eminent committee ensures a fair, transparent process to identify passionate young leaders.</p>
+                    <p>
+                        {{language1=='En' ? 'Our eminent committee ensures a fair, transparent process to identify passionate young leaders.':'हमारी प्रतिष्ठित समिति एक निष्पक्ष और पारदर्शी प्रक्रिया सुनिश्चित करती है ताकि जुनूनी युवा नेताओं की पहचान की जा सके।'}}
+
+                    </p>
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-4 position-relative p_bg">
                             <img src="~/Content/images/priyanka.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">SMT. PRIYANKA GANDHI</h5>
-                                <p class="small_fnt text-white mb-0">General Secretary of Congress</p>
+                                <h5 class="text-white mb-0">
+                                    {{language1=='En' ? 'SMT. PRIYANKA GANDHI':'श्रीमती प्रियंका गांधी'}}
+                                </h5>
+                                <p class="small_fnt text-white mb-0">
+                                    {{language1=='En' ? 'General Secretary of Congress':'कांग्रेस की महासचिव'}}
+
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 position-relative p_bg">
                             <img src="~/Content/images/shiri_ajay.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">SHRI AJAY MAKEN</h5>
-                                <p class="small_fnt text-white mb-0">Treasurer of Congress</p>
+                                <h5 class="text-white mb-0">
+                                    {{language1=='En' ? 'SHRI AJAY MAKEN':'श्री अजय माकन'}}
+                                </h5>
+                                <p class="small_fnt text-white mb-0">
+                                    {{language1=='En' ? 'Treasurer of Congress':'कांग्रेस के कोषाध्यक्ष'}}
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 position-relative p_bg">
                             <img src="~/Content/images/praveen.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">SHRI PRAVEEN CHAKRAVARTY</h5>
-                                <p class="small_fnt text-white mb-0">Chairman of AIPC</p>
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'SHRI PRAVEEN CHAKRAVARTY':'श्री प्रवीन चक्रवर्ती'}}</h5>
+                                <p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>
                             </div>
                         </div>
                     </div>
@@ -259,17 +305,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="small_fnt1 sec_para">
+                    <p class="small_fnt1 sec_para" ng-show="language1=='En'">
                         Join our prestigious fellowship program, where we select 50 exceptional individuals annually, striving to represent
                         every state and Union Territory across India. Seize this opportunity to make a nationwide impact and become a leader
                         in your community. Apply now to be the change-maker from your region!
+                    </p>
+                    <p class="small_fnt1 sec_para" ng-show="language1=='Hi'">
+                        हमारे प्रतिष्ठित फेलोशिप प्रोग्राम से जुड़ें, जहां हम हर साल 50 उत्कृष्ट व्यक्तियों का चयन करते हैं, 
+                        जो भारत के हर राज्य और केंद्र शासित प्रदेश का प्रतिनिधित्व करने का प्रयास करते हैं। इस अवसर का लाभ उठाएं, 
+                        राष्ट्रव्यापी प्रभाव डालें और अपने समुदाय में एक नेता बनें। अपने क्षेत्र से परिवर्तनकारी नेता बनने के लिए अभी आवेदन करें!
                     </p>
                 </div>
             </div>
             <div class="row mrg_top">
                 <div class="col-lg-12">
                     <h1 class="title text-white mt-4">
-                        YOUR JOURNEY STARTS HERE
+                        {{language1=='En' ? 'YOUR JOURNEY STARTS HERE':'आपकी यात्रा यहीं से शुरू होती है'}}
                     </h1>
                 </div>
             </div>
@@ -277,21 +328,21 @@
                 <div class="col-lg-6">
                     <div class="journey_div">
                         <div class="date">
-                            <h2>15th Feb, 2025</h2>
+                            <h2>1st March, 2025</h2>
                         </div>
-                        <h3>Applications Open</h3>
+                        <h3> {{language1=='En' ? 'Applications Open':'आवेदन खुले हैं'}}</h3>
                     </div>
                     <div class="journey_div">
                         <div class="date">
-                            <h2>15th April, 2025</h2>
+                            <h2>30th April, 2025</h2>
                         </div>
-                        <h3>Applications Close</h3>
+                        <h3> {{language1=='En' ? 'Applications Close':'आवेदन बंद'}}</h3>
                     </div>
                     <div class="journey_div no">
                         <div class="date">
-                            <h2>15th May, 2025</h2>
+                            <h2>31st May, 2025</h2>
                         </div>
-                        <h3>Selection Announcements</h3>
+                        <h3> {{language1=='En' ? 'Selection Announcements':'चयन घोषणाएँ'}}</h3>
                     </div>
 
                 </div>
@@ -307,17 +358,24 @@
                 </div>
                 <div class="col-lg-6 ms-lg-auto">
                     <div class="abt_div">
-                        <h1 class="title">
+                        <h1 class="title" ng-show="language1=='En'">
                             YOUR OPPORTUNITY<br />
                             TO LEAD THE CHANGE<br />
                             STARTS HERE
                         </h1>
-                        <p>
+                        <h1 class="title" ng-show="language1=='Hi'">
+                            आपके बदलाव <br />का नेतृत्व करने का अवसर <br />यहीं से शुरू होता है
+                        </h1>
+                        <p ng-show="language1=='En'">
                             Applications close on 15th April, 2025.
                             Take the first step toward becoming
                             a transformative leader.
                         </p>
-                        <a href="/apply" class="btn btn-warning mt-1 small_fnt">Apply Now</a>
+                        <p ng-show="language1=='Hi'">
+                            आवेदन 15 अप्रैल, 2025 को बंद हो जाएंगे।
+                            परिवर्तनकारी नेता बनने की दिशा में पहला कदम उठाएँ।
+                        </p>
+                        <a href="/apply" class="btn btn-warning mt-1 small_fnt">{{language1=='En' ? 'Apply Now':'अभी आवेदन करें'}}</a>
                     </div>
                 </div>
             </div>

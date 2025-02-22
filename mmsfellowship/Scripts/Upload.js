@@ -27,6 +27,12 @@ app.controller("dashboardController",["$scope", "$http", "$compile", function ($
     }
     if (localStorage.getItem("lan") == "" || localStorage.getItem("lan") == undefined)
         localStorage.setItem("lan", "En");
+
+
+    $scope.language1 = "En";
+    if (localStorage.getItem("lan") != "" && localStorage.getItem("lan") != undefined)
+        $scope.language1 = localStorage.getItem("lan");
+
     $scope.language = localStorage.getItem("lan");
     $("#drplanguage").val($scope.language)
     $scope.closemenu = function () {
