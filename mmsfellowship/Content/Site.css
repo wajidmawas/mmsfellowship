@@ -104,7 +104,7 @@ p{
 .btn_main {
     background: #414042;
     color:#fff;
-    border-radius:0;
+    border-radius:0 !important;
 }
 
 .btn_main:hover {
@@ -128,14 +128,14 @@ p{
 }
 .sub_title {
     font-size: 20px;
-    color: #fff; 
+    color: #000; 
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 5px;
     margin-top:2%
 }
 .bg {
-    background: url(images/bg_slider.jpg) no-repeat;
+    background: url(images/bg_slider2.jpg) no-repeat;
     background-size: cover;
     padding: 5% 0 10% !important;
 }
@@ -175,7 +175,7 @@ p{
 .top_img::after {
     width: 90%;
     height: 1px;
-    background-color: #ffcd00;
+    background-color: #1ca9ec;
     position: absolute;
     top: 50%;
     left: 63px;
@@ -192,18 +192,22 @@ p{
     }
 
     .cards .card {
-        height: auto;
+        height: 220px;
         border-radius: 0 !important
     }
 
-.details{
-    position:absolute;
-    bottom:10px;
-    left:15px;
-    z-index:9;
-    padding:5px;
-    margin:0 5px;
-    border:1px solid #fff;
+.ht_auto{
+    height:auto !important
+}
+
+.details {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 9;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #fff;
 }
 .details h5{
     font-size:13px;
@@ -370,7 +374,30 @@ label {
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1) inset;
         }
 
+.mflex{
+    display:flex;
+    align-items:center;
 
+}
+    .mflex h2{
+        font-weight:bold;
+        font-size:24px;
+    }
+.tble{
+    margin-bottom:50px;
+}
+.tble th {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 10px 20px;
+}
+.tble td {
+    color: #fff;
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #fccf13;
+}
 @media screen and (max-width: 767px) {
     body { 
         font-size: 14px;
@@ -399,11 +426,14 @@ label {
         width: 40px;
     }
     .main_title h1 {
-        font-size: 16px;
+        font-size: 14px;
         margin: 2% 0;
     }
-    .main_title{
-        padding:3% 0;
+    .bg_5{
+        background-size:unset !important
+    }
+    .main_title {
+        padding: 3% 0;
     }
     .btn_main:hover { 
         font-size: 10px !important;
@@ -424,14 +454,22 @@ label {
             left:45px
         }
     .bg {
-        padding: 5% 0 20% !important;
+        padding: 5% 0 40% !important;
+    }
+    .mflex h2{
+        font-size:16px;
     }
     .rvs {
         padding: 20% 0 10% !important;
+        background-size:cover !important
     }
-    .date h2 {
-        font-size: 16px;
-    }
+        .rvs .row:first-child{
+            padding-top:20px;
+
+        }
+        .date h2 {
+            font-size: 16px;
+        }
     .journey_div h3 {
         font-size: 14px;
         color: #fff;
@@ -453,7 +491,7 @@ label {
         width:220px
     }
     .lastTI::after {
-        background-color: #ffcd00 !important;
+        background-color: #1ca9ec !important;
     }
     .small_fnt1{
         font-size:13px
