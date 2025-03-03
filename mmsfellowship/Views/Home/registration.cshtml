@@ -217,7 +217,7 @@
                                 Dr. Manmohan Singh Fellows Program Team<br />
                                 All India Professionals’ Congress
                             </p>
-                            <p style="color:white" ng-show="language1=='En'">
+                            <p style="color:white" ng-show="language1=='Hi'">
                                 डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम में आपकी रुचि के लिए धन्यवाद। हम आपकी जनसेवा और नेतृत्व के प्रति जुनून को देखकर उत्साहित हैं और भारत के उज्जवल भविष्य को संवारने के प्रति आपकी प्रतिबद्धता की सराहना करते हैं।
 
                                 <br /><br />
@@ -355,7 +355,7 @@
                                 <div class="col-lg-8">
                                     <div class="custom-file">
                                         <input type="file" id="txtFile_phot" accept="image/*" ng-model="Image">
-                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label"> {{language=='En' ? 'Choose File *':'फ़ाइल चुनें * '}}</label> 
+                                        <label for="txtFile_phot" id="File_phot" class="custom-file-label"> {{language=='En' ? 'Choose File *':'फ़ाइल चुनें * '}}</label>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +378,7 @@
                                     निम्नलिखित प्रश्न का उत्तर देते हुए 2 मिनट से अधिक का वीडियो सबमिट करें,
                                     आप अपनी पसंदीदा भाषा में उत्तर रिकॉर्ड कर सकते हैं
                                     <br /><br />
-                                          <b>“भारतीय राजनीति में आप कौन सा एक बदलाव लाने के लिए सबसे अधिक संकल्पित हैं, और क्यों?”</b>*
+                                    <b>“भारतीय राजनीति में आप कौन सा एक बदलाव लाने के लिए सबसे अधिक संकल्पित हैं, और क्यों?”</b>*
                                 </label>
                                 <div class="custom-file">
                                     <input type="file" id="myFile" accept="video/mp4,video/x-m4v,video/*" ng-model="Video">
@@ -388,6 +388,26 @@
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'How did you get to know about this program? *':'आपको इस कार्यक्रम के बारे में कैसे पता चला? *'}}</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="form-select" id="drpprogram"   ng-model="program">
+                                        <option value="">Select</option>
+                                        <option value="Social media">Social media</option>
+                                        <option value="⁠Industry Association">⁠Industry Association</option>
+                                        <option value="Alumni group">Alumni group</option>
+                                        <option value="Colleagues">Colleagues</option>
+                                        <option value="Friends/Family">Friends/Family</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <input type="text"  id="txtEmail" ng-show="program=='Others'" ng-model="program_others" class="form-control mrg_top" />
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12" style="margin-top:5%;margin-bottom:5%">

@@ -472,6 +472,14 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             showToast("Invalid video file");
             return false;
         } 
+        else if ($scope.program == null || $scope.program == "" || $scope.program == undefined) {
+            showToast("Please select 'How did you get to know about this program'");
+            return false;
+        }
+        else if ($scope.program == 'Others' && ($scope.program_others == '' || $scope.program_others == null)) {
+            showToast("Please enter others");
+            return false;
+        }
         else {
 
             $(".loading").show();
@@ -489,7 +497,7 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             data.append("StateID", $scope.StateID);
             data.append("District", $scope.District);
             data.append("VideoFile", $scope.VideoFile);
-            data.append("ImageFile", $scope.AadharFile);
+            data.append("ImageFile", $scope.AadharFile); data.append("program", ($scope.program == 'Others' ? $scope.program_others : $scope.program));
             data.append("Qualification", $scope.Qualification);
             data.append("IPAddress", $scope.UserLocation);  
             $.ajax({

@@ -174,7 +174,8 @@ All India Professionals’ Congress";
                 obj.Add((HttpContext.Request.Form["District"]));
                 obj.Add((HttpContext.Request.Form["IPAddress"]));
                 obj.Add(HttpContext.Request.Form["VideoFile"]);
-                obj.Add(HttpContext.Request.Form["ImageFile"]); 
+                obj.Add(HttpContext.Request.Form["ImageFile"]);
+                obj.Add(HttpContext.Request.Form["program"]);
                 Common.InfoLogs("Comments Request Object before saving USP_APP_SAVEMMSFELLOWSHIP: " + JsonConvert.SerializeObject(obj));
                 DataSet dset = ServiceActionHelper.ExecuteSP(obj, "USP_APP_SAVEMMSFELLOWSHIP");
                 if (dset != null && dset.Tables.Count > 0 && dset.Tables[0].Rows.Count > 0)
