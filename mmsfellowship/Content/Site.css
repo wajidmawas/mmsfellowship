@@ -405,12 +405,21 @@ label {
     .small_fnt{
         font-size:12px;
     }
-.cards{
-    width:49.5%;
-    margin-bottom:20px
-}
+    .tble th {
+        font-size: 15px; 
+    }
+    .pt-5 {
+        padding-top: 3rem !important;
+    }
+    .pt-6 {
+        padding-top: 6rem !important;
+    }
+    .cards {
+        width: 49.5%;
+        margin-bottom: 20px
+    }
     .title {
-        font-size: 20px;
+        font-size: 18px;
     }
     .p_bg{
         margin-bottom:20px;
@@ -457,7 +466,7 @@ label {
         padding: 5% 0 40% !important;
     }
     .mflex h2{
-        font-size:16px;
+        font-size:13px;
     }
     .rvs {
         padding: 20% 0 10% !important;
