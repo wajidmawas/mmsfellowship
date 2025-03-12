@@ -207,7 +207,7 @@ p{
     }
 
 .ht_auto{
-    height:auto !important
+    height:120px !important
 }
 
 .details {
@@ -415,8 +415,11 @@ label {
     body { 
         font-size: 14px;
     }
-    #why{
-        padding-bottom:80%!important;
+    .bg_5 {
+        padding: 14% 0 5% !important;
+    }
+    #why {
+        padding-bottom: 80% !important;
     }
     .video_tag {
         height: 690px;
@@ -450,7 +453,7 @@ label {
         font-size: 18px;
     }
     .text-dark {
-        font-size:22px;
+        font-size:25px;
     }
     .p_bg {
         margin-bottom: 20px;
