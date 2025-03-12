@@ -241,10 +241,10 @@ p{
     .journey_div::after {
         content: "";
         position: absolute;
-        bottom: -55px;
+        bottom: -62px;
         left: 20%;
         width: 1px;
-        height: 55px;
+        height: 62px;
         background: #ffcd00;
     }
     .no::after{
@@ -411,15 +411,46 @@ label {
     width: 20% !important;
     margin-bottom: 20px;
 }
+.Mainslider {
+    display: block;
+}
+
+.mb_slider {
+    display: none;
+}
+.navbar-brand img{
+    width:220px;
+}
+.bottom_nav li:last-child{
+    border-right:0 !important;
+}
 @media screen and (max-width: 767px) {
-    body { 
+    .bg {
+        background: #1491e6 !important;
+    }
+        .main_title{
+        position:absolute;
+        margin:auto;
+        bottom:0;
+        left:0;
+        right:0;
+        width:100%
+    }
+    
+    .Mainslider {
+        display: none;
+    }
+    .mb_slider{
+        display:block;
+    }
+    body {
         font-size: 14px;
     }
     .bg_5 {
         padding: 14% 0 5% !important;
     }
     #why {
-        padding-bottom: 80% !important;
+        padding-bottom: 10% !important;
     }
     .video_tag {
         height: 690px;
@@ -431,7 +462,9 @@ label {
         display: none !important;
     }
     .btn_main {
-        font-size: 10px;
+        font-size: 12px;
+        background: #1ca9ed;
+        color:#fff
     }
     .small_fnt {
         font-size: 12px;
@@ -467,8 +500,9 @@ label {
         width: 40px;
     }
     .main_title h1 {
-        font-size: 14px;
+        font-size: 22px;
         margin: 2% 0;
+        color: #1ca9ed;
     }
     .bg_5{
         background-size:unset !important
