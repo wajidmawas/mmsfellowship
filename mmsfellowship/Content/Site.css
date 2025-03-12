@@ -418,6 +418,9 @@ label {
     #why{
         padding-bottom:80%!important;
     }
+    .video_tag {
+        height: 690px;
+    }
     .verticle_video {
         display: block !important;
     }
