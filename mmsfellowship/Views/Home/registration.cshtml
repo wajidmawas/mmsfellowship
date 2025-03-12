@@ -262,7 +262,7 @@
                         <div class="col-md-12">
                             <div class="row g-3 align-items-center mb-3">
                                 <div class="col-lg-3">
-                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'DOB *':'जन्म तिथि'}}</label>
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Date Of Birth *':'जन्म तिथि'}}</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="date" id="txtDOB" ng-model="DOB" class="form-control" />
@@ -347,6 +347,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-12">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-lg-3">
+                                    <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'Profession *':'ईमेल *'}}</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" id="txtProfession" ng-model="Profession" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-12 bdr_yellor mb-3 mt-3">
                             <div class="row g-3 align-items-center">
                                 <div class="col-lg-4">
@@ -369,7 +379,7 @@
                         <div class="col-md-12 bdr-btm_yellow">
                             <div class="form-group d-flex flex-column input">
                                 <label ng-show="language1=='En'">
-                                    Submit a video (not more than 3 mins) answering the following question,
+                                    Submit a video (not more than 3 minutes) answering the following question.
                                     You may record the answer in the language of your choice
                                     <br /><br />
                                     <b>“What is one change you are most determined to bring to Indian politics, and why?”</b>
@@ -397,7 +407,7 @@
                                     <label for="inputPassword6" class="col-form-label">{{language1=='En' ? 'How did you get to know about this program?':'आपको इस कार्यक्रम के बारे में कैसे पता चला?'}}</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-select" id="drpprogram"   ng-model="program">
+                                    <select class="form-select" id="drpprogram" ng-model="program">
                                         <option value="">Select</option>
                                         <option value="Social media">Social media</option>
                                         <option value="⁠Industry Association">⁠Industry Association</option>
@@ -406,7 +416,7 @@
                                         <option value="Friends/Family">Friends/Family</option>
                                         <option value="Others">Others</option>
                                     </select>
-                                    <input type="text"  id="txtEmail" ng-show="program=='Others'" ng-model="program_others" class="form-control mrg_top" />
+                                    <input type="text" id="txtEmail" ng-show="program=='Others'" ng-model="program_others" class="form-control mrg_top" />
                                 </div>
                             </div>
                         </div>

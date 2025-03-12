@@ -415,8 +415,20 @@ label {
     body { 
         font-size: 14px;
     }
-    .small_fnt{
-        font-size:12px;
+    #why{
+        padding-bottom:80%!important;
+    }
+    .verticle_video {
+        display: block !important;
+    }
+    .horizontal_video {
+        display: none !important;
+    }
+    .btn_main {
+        font-size: 10px;
+    }
+    .small_fnt {
+        font-size: 12px;
     }
     .tble th {
         font-size: 15px; 
@@ -434,17 +446,17 @@ label {
     .title {
         font-size: 18px;
     }
-    .p_bg{
-        margin-bottom:20px;
-        width:50% !important
+    .text-dark {
+        font-size:22px;
+    }
+    .p_bg {
+        margin-bottom: 20px;
+        width: 50% !important
     }
     .nav-item{
         margin-bottom:15px;
         border-right:0;
-    }
-    .btn_main{
-        font-size:12px;
-    }
+    }  
     .main_title img {
         width: 40px;
     }
@@ -459,7 +471,7 @@ label {
         padding: 3% 0;
     }
     .btn_main:hover { 
-        font-size: 10px !important;
+        font-size: 8px !important;
     }
     .abt_div{
         margin:10px 0

@@ -164,14 +164,22 @@ All India Professionals’ Congress";
                 obj.Add(HttpContext.Request.Form["VideoFile"]);
                 obj.Add(HttpContext.Request.Form["ImageFile"]);
                 obj.Add(HttpContext.Request.Form["program"]);
+                obj.Add(HttpContext.Request.Form["Profession"]);
                 Common.InfoLogs("Comments Request Object before saving USP_APP_SAVEMMSFELLOWSHIP: " + JsonConvert.SerializeObject(obj));
                 DataSet dset = ServiceActionHelper.ExecuteSP(obj, "USP_APP_SAVEMMSFELLOWSHIP");
                 if (dset != null && dset.Tables.Count > 0 && dset.Tables[0].Rows.Count > 0)
                 {
-                    ASyncMethodCaller caller = new ASyncMethodCaller(this.SendNotif);
-                    caller.BeginInvoke(HttpContext.Request.Form["Name"], HttpContext.Request.Form["EmailAddress"], new AsyncCallback(this.CallBack), caller);
+                    if (dset.Tables[0].Columns.Contains("duplicate"))
+                    {
+                        return Json(new { Response = 300, Data = JsonConvert.SerializeObject(dset), JsonRequestBehavior.AllowGet });
+                    }
+                    else
+                    {
+                        ASyncMethodCaller caller = new ASyncMethodCaller(this.SendNotif);
+                        caller.BeginInvoke(HttpContext.Request.Form["Name"], HttpContext.Request.Form["EmailAddress"], new AsyncCallback(this.CallBack), caller);
 
-                    return Json(new { Response = 200, Data = JsonConvert.SerializeObject(dset), JsonRequestBehavior.AllowGet });
+                        return Json(new { Response = 200, Data = JsonConvert.SerializeObject(dset), JsonRequestBehavior.AllowGet });
+                    }
                 }
                 else
                     return Json(new { Response = -100, Data = "Error Occured Please try again later", JsonRequestBehavior.AllowGet });

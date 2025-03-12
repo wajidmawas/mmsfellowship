@@ -1,6 +1,6 @@
 ﻿var baseURL = window.location.origin;
 var apiURL = "https://aicc_new.pulseadmin.in/";
-if (window.location.origin == "http://localhost:51059")
+if (window.location.origin == "http://localhost:51050")
     baseURL = window.location.origin;
 else
     baseURL = "https://mmsfellows.profcongress.in/";
@@ -464,6 +464,10 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             showToast("Invalid Qualification");
             return false;
         }
+        else if ($scope.Profession == null || $scope.Profession == "" || $scope.Profession == 0) {
+            showToast("Invalid Profession");
+            return false;
+        }
         else if ($scope.AadharFile == null || $scope.AadharFile =='') {
             showToast("Invalid aadhar file");
             return false;
@@ -494,6 +498,7 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
             data.append("Gender", $scope.Gender);
             data.append("MobileNo", $scope.MobileNo);
             data.append("EmailAddress", $scope.EmailAddress);
+            data.append("Profession", $scope.Profession);
             data.append("StateID", $scope.StateID);
             data.append("District", $scope.District);
             data.append("VideoFile", $scope.VideoFile);
@@ -509,14 +514,19 @@ app.controller("mmsfellowshipController", ["$scope", "$http", "$compile", "$sce"
                 processData: false,
                 success: function (result) {
                     $(".loading").hide();
-                    $('html, body').animate({
-                        scrollTop: $('#content').offset().top - 20
-                    }, 'slow');
+                  
                     if (result.Response === 200) {
+                        $('html, body').animate({
+                            scrollTop: $('#content').offset().top - 20
+                        }, 'slow');
                         $("#divForm,.divRegister").hide();
-                        $("#content").show(); 
-                       
+                        $("#content").show();  
 
+                    }
+                    else if (result.Response === 300) {
+                        showToast("Duplicate mobile no found");
+                        alert("Duplicate mobile no found")
+                        return false;
                     }
                     else {
                         showToast(result.Data)
