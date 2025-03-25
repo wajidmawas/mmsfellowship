@@ -11,7 +11,7 @@
             <div class="main_title">
                 <img src="~/Content/images/aipc_logo.png" />
                 <h1 ng-show="language1=='En'">
-                    LEAD THE CHALLENGE<BR />
+                    LEAD THE CHANGE<BR />
                     FROM THE HEART OF<BR />
                     INDIAN POLITICS
                 </h1>
@@ -97,16 +97,15 @@
 
                     <div class="abt_div" ng-show="language1=='Hi'">
                         <h1 class="title">
-                            कुछ लोग बदलाव का इंतजार करते हैं।<br />
-                            दूसरे उसे नेतृत्व देते हैं। आप क्या करेंगे?<br />
+                            समावेशी राजनीति में एक वास्तविक करियर बनाएं<br /> 
                         </h1>
                         <p>
                             <br />
-                            भारत का भविष्य कभी साहसिक, दूरदर्शी नेताओं के बिना नहीं रह सकता।
-                            डॉ. मनमोहन सिंह फेलोशिप प्रोग्राम सिर्फ एक अवसर नहीं है—यह राजनीतिक नेतृत्व के केंद्र तक पहुंचने का आपका मार्ग है।
+                            डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम एक राजनीतिक नेतृत्व इनक्यूबेटर है, जो राष्ट्रीय राजनीति में प्रवेश के लिए एक विशेष, प्रभावशाली मार्ग प्रदान करता है। यह कोई प्रारंभिक स्तर की इंटर्नशिप नहीं है,
+                            बल्कि भारतीय राष्ट्रीय कांग्रेस के शीर्ष नेतृत्व के साथ निकटता से काम करने का एक दुर्लभ अवसर है—एक ऐसा अवसर जो नेतृत्व में सीधी भागीदारी का मार्ग प्रशस्त करता है।
                         </p>
                         <p>
-                            बेजोड़ मार्गदर्शन प्राप्त करें, वरिष्ठ नेताओं तक सीधा पहुंचें, वास्तविक नीति निर्माण का अनुभव लें, और राष्ट्र को आकार देने का अवसर पाएं।
+                            यदि आपके पास कम से कम 10 वर्षों का पेशेवर अनुभव है और आप एक सार्थक प्रभाव डालने के लिए तैयार हैं, तो यह नेतृत्व में कदम रखने का आपका आह्वान है।
                         </p>
                     </div>
                 </div>
@@ -122,17 +121,28 @@
                             <img src="~/Content/images/hand_logo.png" width="96" />
                             <div class="ml-2">
                                 <h1 class="title text-white">
-                                    {{language1=='En' ? 'THE INDIAN NATIONAL CONGRESS:':'डॉ. मनमोहन सिंह फेलोशिप प्रोग्राम क्यों चुनें?'}}
+                                    {{language1=='En' ? 'THE INDIAN NATIONAL CONGRESS:':'भारतीय राष्ट्रीय कांग्रेस:'}}
                                 </h1>
-                                <h2 class="text-white">A Legacy of Professional Leadership - Upholding the Constitution.<br /> Drawn from People's Movements</h2>
+                                <h2 class="text-white">
+                                    {{language1=='En' ? "A Legacy of Professional Leadership - Upholding the Constitution,  Drawn from People's Movements.:":'व्यावसायिक नेतृत्व की विरासत – संविधान की रक्षा, जन आंदोलनों से प्रेरित'}}
+
+                                </h2>
                             </div>
                         </div>
-                        <div class="col-lg-12 mt-4">
+                        <div class="col-lg-12 mt-4" ng-show="language1=='En'">
                             <p class="text-white">
-                                The Indian National Congress (INC) has been at the forefront of India's nation-building. It has been led by professionals - lawyers, economists, academics, doctors, and civil servants who have played a crucial role in shaping the country's politics. The leaders who led us in the freedom struggle and the drafting of our Constitution, like Mahatma Gandhi, Motilal Nehru, Sardar Patel, Dr. B. R. Ambedkar, TT Krishnamachari. Sarojini Naidu, etc., were all professionals.
+                                The Indian National Congress (INC) has been at the forefront of India's nation-building. It has been led by professionals - lawyers, economists, academics, doctors, and civil servants who have played a crucial role in shaping the country's politics. The leaders who led us in the freedom struggle and the drafting of our Constitution, like Mahatma Gandhi, Motilal Nehru, Sardar Patel, Dr. B. R. Ambedkar, TT Krishnamachari, Sarojini Naidu, etc., were all professionals.
                             </p> <p class="text-white">
-    In recent decades, leaders like Dr. Manmohan Singh, and many other professionals have contributed to strengthening rights-based politics, driving transformation and leading people's movements. <br/><br /> The Dr. Manmohan Singh Fellows program carries forward that legacy, creating a new generation of professional leaders committed to strengthening democracy and people's movements.
-</p>
+                                In recent decades, leaders like Dr. Manmohan Singh, and many other professionals have contributed to strengthening rights-based politics, driving transformation and leading people's movements. <br /><br /> The Dr. Manmohan Singh Fellows program carries forward that legacy, creating a new generation of professional leaders committed to strengthening democracy and people's movements.
+                            </p>
+                        </div>
+                        <div class="col-lg-12 mt-4" ng-show="language1=='Hi'">
+                            <p class="text-white">
+                                भारतीय राष्ट्रीय कांग्रेस (INC) भारत के राष्ट्र-निर्माण के अग्रणी मोर्चे पर रही है। यह सदैव पेशेवरों द्वारा नेतृत्व की गई है—वकील, अर्थशास्त्री, शिक्षाविद, डॉक्टर और सिविल सेवक, जिन्होंने देश की राजनीति को आकार देने में महत्वपूर्ण भूमिका निभाई है।
+                            </p> <p class="text-white">
+                                वे नेता, जिन्होंने हमें स्वतंत्रता संग्राम में नेतृत्व प्रदान किया और हमारे संविधान का निर्माण किया, जैसे महात्मा गांधी, मोतीलाल नेहरू, सरदार पटेल, डॉ. बी. आर. अंबेडकर, टी. टी. कृष्णमाचारी, सरोजिनी नायडू आदि, सभी पेशेवर पृष्ठभूमि से थे।<br /><br />हाल के दशकों में, डॉ. मनमोहन सिंह और कई अन्य पेशेवर नेताओं (पेशेवरों) ने अधिकार-आधारित राजनीति को सशक्त बनाने, परिवर्तन को गति देने और जन आंदोलनों का नेतृत्व करने में महत्वपूर्ण योगदान दिया है। <br /> <br />
+                                डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम इस विरासत को आगे बढ़ाते हुए, लोकतंत्र और जन आंदोलनों को सशक्त बनाने के लिए प्रतिबद्ध नई पीढ़ी के पेशेवर नेताओं को तैयार करता है।
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -198,23 +208,24 @@
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <h1 class="title text-dark">
-                     50 EXCEPTIONAL PROFESSIONALS CHOSEN EVERY YEAR
+                        {{language1=='En' ? ' 50 EXCEPTIONAL PROFESSIONALS CHOSEN EVERY YEAR':'हर साल चुने जाते हैं 50 उत्कृष्ट पेशेवर'}}
+
 
                     </h1>
                     <p class="sec_para" ng-show="language1=='En'">
-                        Representing every State and Union Territory across India.
+                        Representing every State and Union Territory across India. 
                     </p>
-                    <p class="small_fnt1 sec_para" ng-show="language1=='Hi'">
-                        हमारे प्रतिष्ठित फेलोशिप प्रोग्राम से जुड़ें, जहां हम हर साल 50 उत्कृष्ट व्यक्तियों का चयन करते हैं,
-                        जो भारत के हर राज्य और केंद्र शासित प्रदेश का प्रतिनिधित्व करने का प्रयास करते हैं। इस अवसर का लाभ उठाएं,
-                        राष्ट्रव्यापी प्रभाव डालें और अपने समुदाय में एक नेता बनें। अपने क्षेत्र से परिवर्तनकारी नेता बनने के लिए अभी आवेदन करें!
+                     
+                    <p class="sec_para" ng-show="language1=='Hi'"> 
+                        भारत के प्रत्येक राज्य और केंद्रशासित प्रदेश से प्रतिनिधित्व
                     </p>
+
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-12">
                     <h1 class="title">
-                        {{language1=='En' ? 'You Must':'हम किनकी तलाश कर रहे हैं?'}}
+                        {{language1=='En' ? 'You Must':'योग्यता:'}}
 
                     </h1>
                     @*<p class="small_fnt">
@@ -231,7 +242,7 @@
                                 <img src="~/Content/images/indian_citizen_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Be an Indian citizen':'भारतीय नागरिक, 30 वर्ष या उससे कम आयु।'}}
+                                {{language1=='En' ? 'Be an Indian citizen':'आप भारत के नागरिक होने चाहिए'}}
                             </p>
                         </div>
                     </div>
@@ -244,7 +255,7 @@
                                 <img src="~/Content/images/bachelors_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Be a professional with at least 10 years of work experience':'किसी भी विषय में स्नातक की डिग्री धारक हो।'}}
+                                {{language1=='En' ? 'Be a professional with at least 10 years of work experience':'आप (Aapko) कम से कम 10 वर्षों का कार्य अनुभव रखने वाले पेशेवर होने चाहिए'}}
                             </p>
                         </div>
                     </div>
@@ -257,7 +268,7 @@
                                 <img src="~/Content/images/leadership_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Demonstrate a passion for public service, leadership, or societal change':'सार्वजनिक सेवा, नेतृत्व या सामाजिक परिवर्तन के प्रति जुनून प्रदर्शित करता हो'}}
+                                {{language1=='En' ? 'Demonstrate a passion for public service, leadership, or societal change':'आप सार्वजनिक सेवा, नेतृत्व, या सामाजिक परिवर्तन के प्रति गहरी रुचि और समर्पण होने चाहिए'}}
                             </p>
                         </div>
                     </div>
@@ -270,7 +281,7 @@
                                 <img src="~/Content/images/solutions_driven_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Embody progressive, inclusive thinking and a solutions-driven mindset':'प्रगतिशील, समावेशी सोच और समाधान-केंद्रित दृष्टिकोण को अपनाने वाला।'}}
+                                {{language1=='En' ? 'Embody progressive, inclusive thinking and a solutions-driven mindset':'आपके पास प्रगतिशील और समावेशी सोच के साथ समस्याओं के समाधान निकालने की क्षमता होनी चाहिए'}}
                             </p>
                         </div>
                     </div>
@@ -283,7 +294,7 @@
                                 <img src="~/Content/images/work_experience_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Be financially independent and able to dedicate the required time to the program':'कार्य अनुभव एक अतिरिक्त योग्यता है, लेकिन अनिवार्य नहीं है।'}}
+                                {{language1=='En' ? 'Be financially independent and able to dedicate the required time to the program':'आप आर्थिक रूप से आत्मनिर्भर हों और कार्यक्रम के लिए आवश्यक समय देने में सक्षम हों'}}
                             </p>
                         </div>
                     </div>
@@ -293,7 +304,7 @@
             <div class="row mt-5">
                 <div class="col-lg-12">
                     <h1 class="title">
-                        {{language1=='En' ? 'You will gain':'आपको क्या प्राप्त होगा'}}
+                        {{language1=='En' ? 'You will gain':'इससे आपको निम्लिखित लाभ मिलेंगे:'}}
 
                     </h1>
 
@@ -303,9 +314,12 @@
                 <div class="cards">
                         <div class="card ht_auto">
                             <div class="card-body">
-                                <p class="small_fnt1">
+                                <p class="small_fnt1" ng-show="language1=='En'">
                                     <b>Mentorship</b> with Indian National Congress Leaders
-</p>
+                                </p>
+                                <p class="small_fnt1" ng-show="language1=='Hi'">
+                                    भारतीय राष्ट्रीय कांग्रेस के वरिष्ठ नेताओं से मार्गदर्शन और मेंटरशिप
+                                </p>
                             </div>
                         </div>
 
@@ -313,8 +327,11 @@
                 <div class="cards">
                     <div class="card ht_auto">
                         <div class="card-body">
-                            <p class="small_fnt1">
+                            <p class="small_fnt1" ng-show="language1=='En'">
                                 <b>Oppurtunities</b> to work on real political projects
+                            </p>
+                            <p class="small_fnt1" ng-show="language1=='Hi'">
+                                वास्तविक राजनीतिक परियोजनाओं पर काम करने के अवसर
                             </p>
                         </div>
                     </div>
@@ -323,8 +340,11 @@
                 <div class="cards">
                     <div class="card ht_auto">
                         <div class="card-body">
-                            <p class="small_fnt1">
+                            <p class="small_fnt1" ng-show="language1=='En'">
                                 <b>Learning</b> from experienced policymakers
+                            </p>
+                            <p class="small_fnt1" ng-show="language1=='Hi'">
+                                अनुभवी नीति निर्माताओं से सीखने और रणनीतियों को समझने का मौका
                             </p>
                         </div>
                     </div>
@@ -343,8 +363,11 @@
                 <div class="cards">
                     <div class="card ht_auto">
                         <div class="card-body">
-                            <p class="small_fnt1">
+                            <p class="small_fnt1" ng-show="language1=='En'">
                                 <b>Career</b> pathway in politics
+                            </p>
+                            <p class="small_fnt1" ng-show="language1=='Hi'">
+                                राजनीति में करियर बनाने का एक स्पष्ट और व्यावहारिक मार्ग
                             </p>
                         </div>
                     </div>
@@ -358,7 +381,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="title text-dark mb-5">
-                        {{language1=='En' ? 'Program Mentors':'फेलोशिप के पीछे के नेता'}}
+                        {{language1=='En' ? 'Some examples of Program mentors :':'कार्यक्रम मेंटर:'}}
 
                     </h1>
                     @*<p>
@@ -372,7 +395,7 @@
                             <img src="~/Content/images/rahul.jpg" class="w-100" />
                             <div class="details">
                                 <h5 class="text-white mb-0">
-                                    {{language1=='En' ? 'MR. RAHUL GANDHI':''}}
+                                    {{language1=='En' ? 'MR. RAHUL GANDHI':'श्री राहुल गांधी'}}
                                 </h5>
                                 @*<p class="small_fnt text-white mb-0">
                     {{language1=='En' ? 'General Secretary of Congress':'कांग्रेस की महासचिव'}}
@@ -383,7 +406,7 @@
                         <div class="col-lg-2 position-relative p_bg">
                             <img src="~/Content/images/praveen.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. PRAVEEN CHAKRAVARTY':''}}</h5>
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. PRAVEEN CHAKRAVARTY':'श्री प्रवीन चक्रवर्ती'}}</h5>
                                 @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
                             </div>
                         </div>
@@ -391,7 +414,18 @@
                             <img src="~/Content/images/shiri_ajay.jpg" class="w-100" />
                             <div class="details">
                                 <h5 class="text-white mb-0">
-                                    {{language1=='En' ? 'MR. AJAY MAKEN':''}}
+                                    {{language1=='En' ? 'MR. AJAY MAKEN':'श्री अजय माकन'}}
+                                </h5>
+                                @*<p class="small_fnt text-white mb-0">
+                    {{language1=='En' ? 'Treasurer of Congress':'कांग्रेस के कोषाध्यक्ष'}}
+                </p>*@
+                            </div>
+                        </div>
+                        <div class="col-lg-2 position-relative p_bg">
+                            <img src="~/Content/images/K_RAJU_JI.png" class="w-100" />
+                            <div class="details">
+                                <h5 class="text-white mb-0">
+                                    {{language1=='En' ? 'MR. KOPPULA RAJU':'श्री कोप्पुला राजू'}}
                                 </h5>
                                 @*<p class="small_fnt text-white mb-0">
                     {{language1=='En' ? 'Treasurer of Congress':'कांग्रेस के कोषाध्यक्ष'}}
@@ -402,46 +436,55 @@
                         <div class="col-lg-2 position-relative p_bg">
                             <img src="~/Content/images/shashi_tharoor.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. SHASHI THAROOR':''}}</h5>
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. SHASHI THAROOR':'श्री शशि थरूर'}}</h5>
                                 @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
                             </div>
                         </div>
                         <div class="col-lg-2 position-relative p_bg">
                             <img src="~/Content/images/meenakshi.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'MS. MEENAKSHI NATARAJAN':''}}</h5>
-                                @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
-                            </div>
-                        </div>
-                        <div class="col-lg-2 position-relative p_bg">
-                            <img src="~/Content/images/supriya.jpg" class="w-100" />
-                            <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'MS. SUPRIYA SHIRNATE':''}}</h5>
-                                @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MS. MEENAKSHI NATARAJAN':'(सुश्री) मीनाक्षी नटराजन'}}</h5> 
                             </div>
                         </div>
                         <div class="col-lg-2 position-relative p_bg">
                             <img src="~/Content/images/pawan.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. PAWAN KHERA':''}}</h5>
-                                @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. PAWAN KHERA':'श्री पवन खेड़ा'}}</h5> 
                             </div>
                         </div>
-
                         <div class="col-lg-2 position-relative p_bg">
-                            <img src="~/Content/images/ajoy.jpg" class="w-100" />
+                            <img src="~/Content/images/Sachin_Rao.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'DR. AJOY KUMAR':''}}</h5>
-                                @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. SACHIN RAO':'श्री सचिन राव'}}</h5> 
                             </div>
                         </div>
                         <div class="col-lg-2 position-relative p_bg">
                             <img src="~/Content/images/alka.jpg" class="w-100" />
                             <div class="details">
-                                <h5 class="text-white mb-0">{{language1=='En' ? 'MS. ALKA LAMBA':''}}</h5>
-                                @*<p class="small_fnt text-white mb-0">{{language1=='En' ? 'Chairman of AIPC':'एआईपीसी के अध्यक्ष'}}</p>*@
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MS. ALKA LAMBA':'सुश्री अलका लाम्बा'}}</h5> 
                             </div>
                         </div>
+                        <div class="col-lg-2 position-relative p_bg">
+                            <img src="~/Content/images/supriya.jpg" class="w-100" />
+                            <div class="details">
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MS. SUPRIYA SHIRNATE':'सुश्री सुप्रिया श्रीनाते'}}</h5> 
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-2 position-relative p_bg">
+                            <img src="~/Content/images/ajoy.jpg" class="w-100" />
+                            <div class="details">
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'DR. AJOY KUMAR':'डॉ अजय कुमार'}}</h5> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-2 position-relative p_bg">
+                            <img src="~/Content/images/KRISHNA_ALLAVARU.png" class="w-100" />
+                            <div class="details">
+                                <h5 class="text-white mb-0">{{language1=='En' ? 'MR. KRISHNA ALLAVARU':'श्री कृष्ण अल्लावरु'}}</h5> 
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -452,7 +495,9 @@
             <div class="row mt-4">
                 <div class="col-lg-12">
                     <h1 class="title ,b-5 text-white">
-                        Dr. Manmohan Singh Fellows Program
+
+                        {{language1=='En' ? 'Dr. Manmohan Singh Fellows Program':'डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम'}}
+
                     </h1>
                 </div>
             </div>
@@ -462,26 +507,48 @@
                         <table class="tble">
                             <thead>
                                 <tr>
-                                    <th>WHAT THE PROGRAM IS</th>
-                                    <th>WHAT THE PROGRAM IS NOT</th>
+                                    <th>
+                                        {{language1=='En' ? 'WHAT THE PROGRAM IS':'कार्यक्रम की मुख्य विशेषताएँ'}}
+
+                                    </th>
+                                    <th>
+                                        {{language1=='En' ? 'WHAT THE PROGRAM IS NOT':'इस कार्यक्रम में क्या शामिल नहीं है'}}
+
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr ng-show="language1=='En'">
                                     <td>A Political Leadership Incubator, for mid-career or senior professionals, with at least 10 yrs of experience.</td>
                                     <td>An entry-level internship.</td>
                                 </tr>
-                                <tr>
-                                    <td>A Real Path to Leadership, Not Just Another Fellowship.</td>
+                                <tr ng-show="language1=='Hi'">
+                                    <td>एक राजनीतिक नेतृत्व इनक्यूबेटर, जो मध्य-स्तरीय या वरिष्ठ पेशेवरों के लिए है, जिनके पास कम से कम 10 वर्षों का अनुभव हो</td>
+                                    <td>एक प्रवेश-स्तरीय इंटर्नशिप</td>
+                                </tr>
+                                <tr ng-show="language1=='En'">
+                                    <td>A real path to leadership, not just another fellowship.</td>
                                     <td>A short-term, rigid, time-bound program</td>
                                 </tr>
-                                <tr>
+                                <tr ng-show="language1=='Hi'">
+                                    <td>एक वास्तविक नेतृत्व मार्ग, केवल एक और फैलोशिप नहीं</td>
+                                    <td>एक अल्पकालिक, कठोर और समय-सीमित कार्यक्रम</td>
+                                </tr>
+                                <tr ng-show="language1=='En'">
                                     <td>A once-in-a-lifetime chance to work closely with the top leadership, focused on mentorship, opportunities, and growth, working on real-world engagements.</td>
                                     <td>A traditional fellowship that offers passive learning experience through lectures, reading materials or limited interactions with senior leaders through occasional talks or panel discussions.</td>
                                 </tr>
-                                <tr>
+                                <tr ng-show="language1=='Hi'">
+                                    <td>शीर्ष नेतृत्व के साथ निकटता से काम करने का एक दुर्लभ अवसर, जो मार्गदर्शन, अवसरों और विकास पर केंद्रित है, वास्तविक दुनिया की भागीदारी के साथ</td>
+                                    <td>एक पारंपरिक फैलोशिप जो केवल व्याख्यान, अध्ययन सामग्री, या वरिष्ठ नेताओं के साथ सीमित बातचीत तक सीमित हो</td>
+                                </tr>
+                                <tr ng-show="language1=='En'">
                                     <td>No stipend, no fixed tenure but a real opportunity to transition from being a professional to a career politician.</td>
                                     <td>A general exposure program without a clear leadership pathway, incentivised with remuneration or false promises of a role.</td>
+                                </tr>
+                                <tr ng-show="language1=='Hi'">
+                                    <td>कोई वजीफा नहीं, कोई निश्चित अवधि नहीं, बल्कि एक पेशेवर से करियर राजनेता बनने का वास्तविक अवसर</td>
+                                    <td>एक सामान्य जागरूकता कार्यक्रम जिसमें स्पष्ट नेतृत्व मार्गदर्शन न हो, जो वेतन या झूठे वादों से प्रेरित हो</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -510,7 +577,7 @@
                         {{language1=='En' ? 'SUBMIT YOUR APPLICATION':'अपना आवेदन जमा करें'}}
                     </h4>
                     <p>
-                        {{language1=='En' ? ' Provide basic details + Aadhaar upload':'मूलभूत विवरण प्रदान करें + आधार अपलोड करें'}}
+                        {{language1=='En' ? ' Provide basic details + Aadhaar upload':'मूल जानकारी प्रदान करें और आधार कार्ड अपलोड करें'}}
 
                     </p>
                 </div>
@@ -519,10 +586,10 @@
                         <img src="~/Content/images/2.png" />
                     </div>
                     <h4 class="sub_title">
-                        {{language1=='En' ? 'SHARE YOUR VISION':'अपनी दृष्टि साझा करें'}}
+                        {{language1=='En' ? 'SHARE YOUR VISION':'अपना दृष्टिकोण साझा करें'}}
                     </h4>
                     <p>
-                        {{language1=='En' ? 'Record a 3 minutes video introducing yourself and your vision for India’s future':'अपना परिचय और भारत के भविष्य के लिए अपनी दृष्टि प्रस्तुत करते हुए 3 मिनट का वीडियो रिकॉर्ड करें।'}}
+                        {{language1=='En' ? 'Record a 3 minutes video introducing yourself and your vision for India’s future':'स्वयं का परिचय और भारत के भविष्य के लिए अपना दृष्टिकोण बताते हुए तीन मिनट का वीडियो रिकॉर्ड करें'}}
 
                     </p>
                 </div>
@@ -531,10 +598,10 @@
                         <img src="~/Content/images/3.png" />
                     </div>
                     <h4 class="sub_title">
-                        {{language1=='En' ? 'PERSONAL INTERVIEW':'व्यक्तिगत साक्षात्कार'}}
+                        {{language1=='En' ? 'PERSONAL INTERVIEW':'व्यक्तिगत साक्षात्कार '}}
                     </h4>
                     <p>
-                        {{language1=='En' ? 'Engage with the selection committee to present your ideas and aspirations':'चयन समिति के साथ बातचीत करें और अपने विचार व आकांक्षाएँ प्रस्तुत करें।'}}
+                        {{language1=='En' ? 'Engage with the selection committee to present your ideas and aspirations':'चयन समिति के साथ अपने विचार और आकांक्षाएँ प्रस्तुत करें'}}
                     </p>
                 </div>
             </div>
@@ -550,7 +617,7 @@
             <div class="row mrg_top">
                 <div class="col-lg-12">
                     <h1 class="title text-white mt-4">
-                        {{language1=='En' ? 'YOUR JOURNEY STARTS HERE':'आपकी यात्रा यहीं से शुरू होती है'}}
+                        {{language1=='En' ? 'YOUR JOURNEY STARTS HERE':'आपकी यात्रा यहाँ से शुरू होती है'}}
                     </h1>
                 </div>
             </div>
@@ -558,21 +625,29 @@
                 <div class="col-lg-6">
                     <div class="journey_div">
                         <div class="date">
-                            <h2>15th March, 2025</h2>
+                            <h2>
+                                {{language1=='En' ? '15th March, 2025':'15 मार्च, 2025'}} 
+                            </h2>
                         </div>
-                        <h3> {{language1=='En' ? 'Applications Open':'आवेदन खुले हैं'}}</h3>
+                        <h3> {{language1=='En' ? 'Applications Open':'आवेदन प्रक्रिया शुरू'}}</h3>
                     </div>
                     <div class="journey_div">
                         <div class="date">
-                            <h2>15th May, 2025</h2>
+                            <h2>
+                                {{language1=='En' ? '15th May, 2025':'15 मई, 2025'}}
+
+                            </h2>
                         </div>
-                        <h3> {{language1=='En' ? 'Applications Close':'आवेदन बंद'}}</h3>
+                        <h3> {{language1=='En' ? 'Applications Close':'आवेदन प्रक्रिया बंद'}}</h3>
                     </div>
                     <div class="journey_div no">
                         <div class="date">
-                            <h2>15th June, 2025</h2>
+                            <h2>
+                                {{language1=='En' ? '15th June, 2025':'15 जून, 2025'}}
+
+                            </h2>
                         </div>
-                        <h3> {{language1=='En' ? 'Selection Announcements':'चयन घोषणाएँ'}}</h3>
+                        <h3> {{language1=='En' ? 'Selection Announcements':'चयन की घोषणा'}}</h3>
                     </div>
 
                 </div>
@@ -621,14 +696,14 @@
                             COME JOIN THE NEXT<br /> GENERATION OF LEADERS
                         </h1>
                         <h1 class="title" ng-show="language1=='Hi'">
-                            आपके बदलाव <br />का नेतृत्व करने का अवसर <br />यहीं से शुरू होता है
+                            आइए नेतृत्व की <br /> इस यात्रा में कदम बढ़ाएं <br />और अगली पीढ़ी के नेताओं का हिस्सा बनें। 
                         </h1>
 
 
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <a href="/apply" class="btn btn-warning mt-1 small_fnt">{{language1=='En' ? 'Apply Now':'अभी आवेदन करें'}}</a>
+                    <a href="/apply" class="btn btn-warning mt-1 small_fnt">{{language1=='En' ? 'Apply Now':'अपने आवेदन की प्रक्रिया अभी शुरू करें'}}</a>
                 </div>
             </div>
         </div>

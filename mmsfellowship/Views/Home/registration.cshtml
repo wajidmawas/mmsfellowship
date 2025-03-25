@@ -150,6 +150,17 @@
             width:90%;
             
         }
+        .navbar-brand{
+            display:block !important;
+            text-align:center;
+            margin-top:15px;
+        }
+        .inner_div1{
+            margin-top:0 !important
+        }
+        .main_title{
+            display:none;
+        }
     }
     .progress-wrapper {
         width: 100%;
@@ -181,19 +192,22 @@
                 <h1 class="text-white" ng-show="language1=='Hi'">
                     युवा नेताओं का समर्थन<br />
                     बेहतर कल के लिए
-                </h1> 
+                </h1>
 
             </div>
         </div>
 
     </section>
-   
+    <a class="navbar-brand" href="/" style="display:none">
+        <img src="~/Content/images/AIPC_LOGO.svg" alt="Logo" class="size-36">
+    </a>
+
     <div class="container">
         <div class="main_left_panel">
 
-            <div class="inner_div1 row mt-5"> 
-                 
-                <div class="col-md-6 mx-lg-auto"> 
+            <div class="inner_div1 row mt-5">
+
+                <div class="col-md-6 mx-lg-auto">
                     <div class="overlay" id="content" style="display:none">
                         <div class="row col-md-12 msg">
                             <p style="color:white" ng-show="language1=='En'">
@@ -241,7 +255,7 @@
                                 **डॉ. मनमोहन सिंह फेलोज़ प्रोग्राम टीम**<br />
                                 **ऑल इंडिया प्रोफेशनल्स कांग्रेस**
                             </p>
-                                <button class="btn btn-warning mt-3 mb-3 text-white" ng-click="close()" style="height:45px">Close</button>
+                            <button class="btn btn-warning mt-3 mb-3 text-white" ng-click="close()" style="height:45px">Close</button>
                         </div>
                     </div>
                     <h3 class="mb-3 mt-5 title font-normal divRegister"><b>{{language1=='En' ? 'Register':'रजिस्टर करें'}}</b></h3>
