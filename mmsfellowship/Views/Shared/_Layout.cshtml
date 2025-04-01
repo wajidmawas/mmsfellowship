@@ -38,8 +38,11 @@
     <div id="navbar">
         <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
             <div class="container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="/" ng-show="language1=='En'">
                     <img src="~/Content/images/AIPC_LOGO.svg" alt="Logo" class="size-36">
+                </a>
+                <a class="navbar-brand" href="/" ng-show="language1=='Hi'">
+                    <img src="~/Content/images/AIPC_LOGO_Hi.svg" alt="Logo" class="size-36">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -47,17 +50,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto" style="font-size: 14px;">
                         @*<li class="nav-item additional-option d-lg-block">
-                            <select class="form-select" id="drplanguage" ng-change="changelanguge()" ng-model="language">
-                                <option value="En">English</option>
-                                <option value="Hi">Hindi</option>
-                            </select>
-                        </li>*@
+                    <select class="form-select" id="drplanguage" ng-change="changelanguge()" ng-model="language">
+                        <option value="En">English</option>
+                        <option value="Hi">Hindi</option>
+                    </select>
+                </li>*@
                         <li class="nav-item additional-option d-lg-block">
                             <a class="nav-link" href="#Home">{{language1=='En' ? 'Home':'होम'}}</a>
                         </li>
                         @*<li class="nav-item additional-option d-lg-block">
-                            <a class="nav-link" href="#about">{{language1=='En' ? 'About':'परिचय'}}</a>
-                        </li>*@
+                    <a class="nav-link" href="#about">{{language1=='En' ? 'About':'परिचय'}}</a>
+                </li>*@
                         <li class="nav-item additional-option d-lg-block">
                             <a class="nav-link" href="#about">{{language1=='En' ? 'Why Apply':'क्यों आवेदन करें'}}</a>
                         </li>

@@ -6,7 +6,7 @@
     <section class="position-relative" id="Home">
 
         <img src="~/Content/images/main_slider.jpg" class="w-100 Mainslider" />
-        <img src="~/Content/images/mobile_slider.jpg" class="mb_slider w-100"
+        <img src="~/Content/images/mobile_slider.jpg" class="mb_slider w-100" />
         <div class="container">
             <div class="main_title">
                 <img src="~/Content/images/aipc_logo.png" />
@@ -208,7 +208,7 @@
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <h1 class="title text-dark">
-                        {{language1=='En' ? ' 50 EXCEPTIONAL PROFESSIONALS CHOSEN EVERY YEAR':'हर साल चुने जाते हैं 50 उत्कृष्ट पेशेवर'}}
+                        {{language1=='En' ? ' 50 EXCEPTIONAL PROFESSIONALS CHOSEN EVERY YEAR':'हर साल 50 उत्कृष्ट पेशेवर चुने जाएँगे'}}
 
 
                     </h1>
@@ -224,14 +224,18 @@
             </div>
             <div class="row mt-5">
                 <div class="col-lg-12">
-                    <h1 class="title">
-                        {{language1=='En' ? 'You Must':'योग्यता:'}}
+                    <h1 class="title" ng-show="language1=='En'">
+                        You Must
+
+                    </h1>
+                    <h1 class="title" ng-show="language1=='Hi'" style="margin-top:4rem!important">
+                        योग्यता
 
                     </h1>
                     @*<p class="small_fnt">
-                            {{language1=='En' ? 'Preference for those coming from rural/modest background.':'ग्रामीण या साधारण पृष्ठभूमि से आने वाले उम्मीदवारों को प्राथमिकता दी जाएगी।'}}
+            {{language1=='En' ? 'Preference for those coming from rural/modest background.':'ग्रामीण या साधारण पृष्ठभूमि से आने वाले उम्मीदवारों को प्राथमिकता दी जाएगी।'}}
 
-                        </p>*@
+        </p>*@
                 </div>
             </div>
             <div class="row mt-4">
@@ -255,7 +259,7 @@
                                 <img src="~/Content/images/bachelors_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Be a professional with at least 10 years of work experience':'आप (Aapko) कम से कम 10 वर्षों का कार्य अनुभव रखने वाले पेशेवर होने चाहिए'}}
+                                {{language1=='En' ? 'Be a professional with at least 10 years of work experience':'आप कम से कम 10 वर्षों का कार्य अनुभव रखने वाले पेशेवर होने चाहिए'}}
                             </p>
                         </div>
                     </div>
@@ -268,7 +272,7 @@
                                 <img src="~/Content/images/leadership_icon.png" />
                             </div>
                             <p class="small_fnt1">
-                                {{language1=='En' ? 'Demonstrate a passion for public service, leadership, or societal change':'आप सार्वजनिक सेवा, नेतृत्व, या सामाजिक परिवर्तन के प्रति गहरी रुचि और समर्पण होने चाहिए'}}
+                                {{language1=='En' ? 'Demonstrate a passion for public service, leadership, or societal change':'आपको सार्वजनिक सेवा, नेतृत्व, या सामाजिक परिवर्तन के प्रति गहरी रुचि और समर्पण होनी चाहिए'}}
                             </p>
                         </div>
                     </div>
@@ -328,7 +332,7 @@
                     <div class="card ht_auto">
                         <div class="card-body">
                             <p class="small_fnt1" ng-show="language1=='En'">
-                                <b>Oppurtunities</b> to work on real political projects
+                                <b>Opportunities</b> to work on real political projects
                             </p>
                             <p class="small_fnt1" ng-show="language1=='Hi'">
                                 वास्तविक राजनीतिक परियोजनाओं पर काम करने के अवसर
@@ -479,7 +483,7 @@
                             </div>
                         </div> 
                         <div class="col-lg-2 position-relative p_bg">
-                            <img src="~/Content/images/KRISHNA_ALLAVARU.png" class="w-100" />
+                            <img src="~/Content/images/KRISHNA_ALLAVARU.jpg" class="w-100" />
                             <div class="details">
                                 <h5 class="text-white mb-0">{{language1=='En' ? 'MR. KRISHNA ALLAVARU':'श्री कृष्ण अल्लावरु'}}</h5> 
                             </div>
@@ -626,7 +630,7 @@
                     <div class="journey_div">
                         <div class="date">
                             <h2>
-                                {{language1=='En' ? '15th March, 2025':'15 मार्च, 2025'}} 
+                                {{language1=='En' ? '27th  March, 2025':'27 मार्च, 2025'}}
                             </h2>
                         </div>
                         <h3> {{language1=='En' ? 'Applications Open':'आवेदन प्रक्रिया शुरू'}}</h3>

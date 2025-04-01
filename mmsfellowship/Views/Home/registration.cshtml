@@ -181,16 +181,15 @@
 
         <img src="~/Content/images/main_slider1.jpg" class="w-100 Mainslider" />
         <div class="container">
-            <div class="main_title">
-                <a href="/"><img src="~/Content/images/main_logo_white.png" /></a>
+            <div class="main_title">              
+                <a href="/"><img src="~/Content/images/main_logo_white.png"   /></a>
                 <h1 class="text-white" ng-show="language1=='En'">
-                    CHAMPIONING<br />
-                    YOUNG LEADERS<br />
-                    FOR A BETTER<br />
-                    TOMORROW
+                    LEAD THE CHANGE<BR />
+                    FROM THE HEART OF<BR />
+                    INDIAN POLITICS
                 </h1>
                 <h1 class="text-white" ng-show="language1=='Hi'">
-                    युवा नेताओं का समर्थन<br />
+                    युवा नेताओं का समर्थन<BR />
                     बेहतर कल के लिए
                 </h1>
 
@@ -198,10 +197,12 @@
         </div>
 
     </section>
-    <a class="navbar-brand" href="/" style="display:none">
+    <a class="navbar-brand" href="/" style="display:none" ng-show="language1=='En'">
         <img src="~/Content/images/AIPC_LOGO.svg" alt="Logo" class="size-36">
     </a>
-
+    <a class="navbar-brand" href="/" style="display:none" ng-show="language1=='Hi'">
+        <img src="~/Content/images/AIPC_LOGO_Hi.svg" alt="Logo" class="size-36">
+    </a>
     <div class="container">
         <div class="main_left_panel">
 
@@ -258,7 +259,8 @@
                             <button class="btn btn-warning mt-3 mb-3 text-white" ng-click="close()" style="height:45px">Close</button>
                         </div>
                     </div>
-                    <h3 class="mb-3 mt-5 title font-normal divRegister"><b>{{language1=='En' ? 'Register':'रजिस्टर करें'}}</b></h3>
+                    <h3 class="mb-3 mt-5 title font-normal divRegister" ng-show="language1=='En'"><b>Register</b></h3>
+                    <h3 class="mb-3 mt-5 title font-normal divRegister" ng-show="language1=='Hi'" style="margin-top:5rem!important"><b>रजिस्टर करें</b></h3>
                     <div class="row" id="divForm">
                         <div class="loading" style="display:none">
                             <img src="@Url.Content("~/Content/images/spinner.gif")" class="spinner" />
